@@ -101,8 +101,25 @@ a{color:inherit}
   display:grid;grid-template-columns:.84fr 1.16fr;gap:34px;align-items:center;width:100%;
 }
 .stage-grid > div{min-width:0}
-.sentence{margin:0;font-family:var(--display);font-weight:500;
-  font-size:clamp(38px,6vw,86px);line-height:1;letter-spacing:-.038em}
+.sentence-wrap{position:relative;font-family:var(--display);
+  font-size:clamp(38px,6vw,86px);line-height:1}
+.sentence{margin:0;font-size:inherit;font-weight:500;line-height:1;letter-spacing:-.038em}
+.ph-layer{position:absolute;inset:0;font-size:inherit;pointer-events:none}
+.ph{position:absolute;left:.04em;height:1em;display:flex;align-items:center;gap:.11em;
+  transition:opacity .5s ease,transform .6s cubic-bezier(.2,.9,.3,1)}
+.ph-2{top:1em}
+.ph-3{top:2em}
+.ph i{position:relative;display:block;width:.66em;height:.3em;border-radius:.07em;opacity:.32}
+.ph i::before{content:"";position:absolute;left:.13em;top:-.075em;
+  width:.4em;height:.075em;border-radius:.04em;background:inherit}
+.ph-2 i:nth-child(1){background:var(--indigo)}
+.ph-2 i:nth-child(2){background:var(--marigold)}
+.ph-2 i:nth-child(3){background:var(--teal)}
+.ph-3 i:nth-child(1){background:var(--rose)}
+.ph-3 i:nth-child(2){background:var(--lav)}
+.stage[data-beat="1"] .ph-2,
+.stage[data-beat="2"] .ph-2,
+.stage[data-beat="2"] .ph-3{opacity:0;transform:translateX(-.18em)}
 .line{display:block;opacity:0;transform:translateY(30px) rotate(-2.6deg);
   transform-origin:left bottom;
   transition:opacity .5s ease,transform .85s cubic-bezier(.18,1.15,.3,1)}
@@ -330,11 +347,17 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
 
     <div class="wrap wrap-wide stage-grid">
       <div>
-        <h1 class="sentence">
-          <span class="line line-1 on">There is a</span>
-          <span class="line line-2">better way to</span>
-          <span class="line line-3">handle it<span class="dot">.</span></span>
-        </h1>
+        <div class="sentence-wrap">
+          <h1 class="sentence">
+            <span class="line line-1 on">There is a</span>
+            <span class="line line-2">better way to</span>
+            <span class="line line-3">handle it<span class="dot">.</span></span>
+          </h1>
+          <div class="ph-layer" aria-hidden="true">
+            <span class="ph ph-2"><i></i><i></i><i></i></span>
+            <span class="ph ph-3"><i></i><i></i></span>
+          </div>
+        </div>
         <p class="beat-note" aria-live="polite">
           <span class="n1 on">Every organisation starts the same way: a few pieces, laid out with care.</span>
           <span class="n2">Then it grows. Models bolted on, pilots that never shipped, a stack nobody owns.</span>
