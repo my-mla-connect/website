@@ -208,6 +208,21 @@ figure{margin:0}
   .feat.flip .feat-txt{order:0}
   .facts{grid-template-columns:1fr;margin-top:38px}
 }
+/* The header is the one row that can't reflow — the button is `nowrap` and the company name
+   shouldn't truncate — so below 600px both sides step down instead of colliding. */
+@media (max-width:600px){
+  .site-head .wrap{padding:0 16px}
+  .head-in{gap:12px}
+  .brand{gap:10px}
+  .brand-name{font-size:20px}
+  .site-head .btn{font-size:13px;padding:9px 15px}
+}
+@media (max-width:400px){
+  .brand{gap:8px}
+  .brand svg{width:22px;height:35px}
+  .brand-name{font-size:18px}
+  .site-head .btn{font-size:12px;padding:8px 12px}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none !important;transition-duration:.01ms !important}
