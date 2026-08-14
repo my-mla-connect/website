@@ -58,6 +58,13 @@ a{color:inherit}
 .brand-name{font-family:var(--display);font-size:26px;font-weight:600;letter-spacing:-.02em;line-height:1}
 .brand-name em{font-style:normal;color:var(--indigo)}
 .brand-tag{font-family:var(--body);font-size:12.5px;color:var(--muted);letter-spacing:.01em;line-height:1.3}
+.head-nav{display:flex;align-items:center;gap:22px}
+.head-link{
+  font-family:var(--body);font-size:15px;font-weight:500;text-decoration:none;
+  color:var(--ink);padding-bottom:3px;border-bottom:1.5px solid transparent;
+  transition:color .2s,border-color .2s;white-space:nowrap;
+}
+.head-link:hover{color:var(--indigo);border-bottom-color:var(--indigo)}
 .btn{
   display:inline-block;font-family:var(--body);font-size:15px;font-weight:500;
   padding:11px 22px;border-radius:999px;text-decoration:none;white-space:nowrap;
@@ -261,6 +268,61 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
 .glyph rect{transition:transform .5s cubic-bezier(.2,1.2,.3,1);transform-box:fill-box;transform-origin:50% 100%}
 .offer:hover .glyph rect:nth-child(3){transform:translateY(-5px)}
 
+/* ---------- products ---------- */
+.prod{
+  display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(30px,4vw,56px);
+  align-items:center;margin-top:56px;padding:clamp(30px,3.4vw,44px);
+  border:1px solid var(--line);border-radius:20px;
+  background:linear-gradient(158deg,rgba(90,81,198,.1),rgba(255,255,255,0) 62%),#FFF;
+}
+.prod > *{min-width:0}
+.prod-head{display:flex;align-items:center;gap:14px;margin:0 0 16px}
+/* The FilesTrace mark: the product's own tile colour and geometry, not the Buddhyantra indigo —
+   it is the mark the app itself ships (apps/web/src/components/brand-mark.tsx). */
+.prod-mark{
+  width:46px;height:46px;border-radius:27%;flex:none;
+  background:#2563EB;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 20px rgba(37,99,235,.3);
+}
+.prod-mark svg{width:91%;height:auto;display:block}
+.prod-name{font-family:var(--display);font-weight:500;font-size:clamp(27px,3.2vw,36px);
+  letter-spacing:-.028em;line-height:1;margin:0}
+.prod-name em{font-style:normal;color:var(--indigo)}
+.prod-line{font-family:var(--display);font-weight:400;font-size:clamp(18px,2vw,22px);
+  letter-spacing:-.015em;line-height:1.32;margin:0 0 14px;max-width:26ch}
+.prod p.prod-body{margin:0 0 22px;font-size:16.5px;color:var(--muted);line-height:1.62}
+.prod-pts{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:9px}
+.prod-pts li{position:relative;padding-left:20px;font-size:15.5px;color:var(--muted);line-height:1.5}
+.prod-pts li::before{
+  content:"";position:absolute;left:0;top:.56em;width:9px;height:6px;border-radius:2px;
+  background:var(--indigo);
+}
+.prod-pts li:nth-child(2)::before{background:var(--marigold)}
+.prod-pts li:nth-child(3)::before{background:var(--teal)}
+.prod-pts li:nth-child(4)::before{background:var(--rose)}
+.prod-more{
+  display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+  font-family:var(--body);font-size:15px;font-weight:500;
+  padding:11px 22px;border-radius:999px;
+  background:var(--ink);color:var(--paper);border:1px solid var(--ink);
+  transition:background .2s,border-color .2s,transform .2s;
+}
+.prod-more:hover{background:var(--indigo);border-color:var(--indigo);transform:translateY(-1px)}
+.prod-more svg{transition:transform .25s}
+.prod-more:hover svg{transform:translateX(3px)}
+.prod-shot{
+  border-radius:12px;overflow:hidden;background:#FFF;border:1px solid var(--line);
+  box-shadow:0 20px 46px -20px rgba(22,20,46,.4), 0 2px 8px rgba(22,20,46,.05);
+}
+.prod-shot .bar{display:flex;align-items:center;gap:6px;padding:9px 12px;
+  background:#F1F0F6;border-bottom:1px solid var(--line)}
+.prod-shot .bar i{width:8.5px;height:8.5px;border-radius:50%;display:block;background:#D6D4E2}
+.prod-shot .bar i:nth-child(1){background:#E4708A}
+.prod-shot .bar i:nth-child(2){background:#EF9F27}
+.prod-shot .bar i:nth-child(3){background:#2E9E8F}
+.prod-shot img{display:block;width:100%;height:auto}
+
 .claim{
   background:
     radial-gradient(46% 52% at 88% 8%, rgba(90,81,198,.4), transparent 68%),
@@ -309,6 +371,11 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
   .beat-note{min-height:4.6em;margin-top:20px}
   .fb1,.fb3{display:none}
   .offers{grid-template-columns:1fr;margin-top:40px}
+  .prod{grid-template-columns:1fr;margin-top:40px}
+}
+@media (max-width:560px){
+  .head-nav{gap:14px}
+  .head-link{display:none}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -333,7 +400,10 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
         <span class="brand-tag">Engineered, not assembled.</span>
       </span>
     </a>
-    <a class="btn btn-ghost" href="#talk">Start a conversation</a>
+    <nav class="head-nav">
+      <a class="head-link" href="#products">Products</a>
+      <a class="btn btn-ghost" href="#talk">Start a conversation</a>
+    </nav>
   </div>
 </header>
 
@@ -577,6 +647,55 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
         <p>Most businesses are sitting on years of operational data doing nothing but taking up storage. We turn it into something you can make decisions with — forecasts, patterns, the questions you didn't know to ask. This is where the advantage is going.</p>
       </article>
     </div>
+  </div>
+</section>
+
+<section class="band" id="products">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="label">products</p>
+      <h2>Things we built, and still run.</h2>
+      <p class="lede">Not demos. Software in daily use by the organisations it was made for — which is also why we keep supporting it long after the invoice cleared.</p>
+    </div>
+
+    <article class="prod reveal">
+      <div>
+        <div class="prod-head">
+          <span class="prod-mark" aria-hidden="true">
+            <svg viewBox="0 0 104 98" fill="#FFFFFF">
+              <rect x="12" y="13" width="80" height="9" rx="3"/>
+              <rect x="12" y="24" width="15" height="61" rx="3"/>
+              <rect x="29" y="42" width="33" height="19" rx="3"/>
+              <rect x="29" y="63" width="63" height="22" rx="3"/>
+            </svg>
+          </span>
+          <h3 class="prod-name">Files<em>Trace</em></h3>
+        </div>
+
+        <p class="prod-line">Where is this file, what’s its status, and who did what to it?</p>
+        <p class="prod-body">FilesTrace is built for organisations that run on files. Every file is filed under a department, moves through a status lifecycle the office configures itself, can be forwarded to another desk, carries its attachments, and keeps an append-only history of everything that happened to it. When somebody rings to ask what happened to their application, the answer is on the screen instead of in someone’s memory.</p>
+
+        <ul class="prod-pts">
+          <li>Departments, wards and a status lifecycle you set up yourself — no code, no support ticket</li>
+          <li>A history that records every comment, forward and status change, and never lets one be edited away</li>
+          <li>Group-based access that spans departments, plus a shared calendar and an RTI Act register</li>
+          <li>Self-hosted on your own PostgreSQL, mobile-first, with PDF exports that match the screen</li>
+        </ul>
+
+        <a class="prod-more" href="products/filestrace.html">
+          More details
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h13M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+      </div>
+
+      <a class="prod-shot" href="products/filestrace.html" aria-label="FilesTrace product page">
+        <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
+        <img src="assets/filestrace/dashboard.jpg" width="1556" height="784" loading="lazy"
+             alt="The FilesTrace dashboard: counts of total, open and closed files, median turnaround, an ageing breakdown of open files, and bars splitting files by status and department.">
+      </a>
+    </article>
   </div>
 </section>
 

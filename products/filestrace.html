@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FilesTrace — file tracking for organisations · Buddhyantra</title>
+<meta name="description" content="FilesTrace is file tracking and status management for organisations. Departments, a configurable status lifecycle, forwarding between offices, attachments, and an append-only history of everything that happened to a file.">
+<meta name="theme-color" content="#5A51C6">
+<!-- The product's own mark, not the company one — this page is what someone bookmarks as FilesTrace. -->
+<link rel="icon" type="image/svg+xml" href="../assets/filestrace/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3F2F8;
+  --paper-2:#FBFAFF;
+  --ink:#16142E;
+  --indigo:#5A51C6;
+  --indigo-deep:#3B3490;
+  --lav:#7F77DD;
+  --marigold:#EF9F27;
+  --teal:#2E9E8F;
+  --rose:#E4708A;
+  --muted:#65627F;
+  --line:rgba(22,20,46,.12);
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Instrument Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--body);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--indigo);outline-offset:3px;border-radius:4px}
+
+/* ---------- header ---------- */
+.site-head{
+  position:fixed;top:0;left:0;right:0;z-index:40;
+  backdrop-filter:blur(12px);background:rgba(246,245,251,.8);
+  border-bottom:1px solid transparent;transition:border-color .3s;
+}
+.site-head.stuck{border-bottom-color:var(--line)}
+.head-in{display:flex;align-items:center;justify-content:space-between;gap:20px;height:88px}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none;min-width:0}
+.brand-txt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.brand-name{font-family:var(--display);font-size:26px;font-weight:600;letter-spacing:-.02em;line-height:1}
+.brand-name em{font-style:normal;color:var(--indigo)}
+.brand-tag{font-family:var(--body);font-size:12.5px;color:var(--muted);letter-spacing:.01em;line-height:1.3}
+.btn{
+  display:inline-block;font-family:var(--body);font-size:15px;font-weight:500;
+  padding:11px 22px;border-radius:999px;text-decoration:none;white-space:nowrap;
+  background:var(--ink);color:var(--paper);border:1px solid var(--ink);
+  transition:background .2s,color .2s,transform .2s;
+}
+.btn:hover{background:var(--indigo);border-color:var(--indigo);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-lg{font-size:17px;padding:15px 30px}
+
+/* ---------- shared band furniture ---------- */
+.band{padding:clamp(76px,9vw,124px) 0;position:relative}
+.band-paper{
+  background:
+    radial-gradient(40% 46% at 96% 4%, rgba(46,158,143,.13), transparent 66%),
+    radial-gradient(38% 44% at 2% 96%, rgba(90,81,198,.12), transparent 66%),
+    var(--paper-2);
+}
+.label{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;color:var(--indigo);margin:0 0 18px}
+h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
+  font-size:clamp(28px,3.6vw,44px);line-height:1.1;margin:0 0 20px}
+.lede{font-size:clamp(18px,2vw,21px);line-height:1.6;color:var(--muted);max-width:58ch;margin:0}
+.reveal{opacity:0;transform:translateY(22px);
+  transition:opacity .7s ease,transform .8s cubic-bezier(.2,.9,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- hero ---------- */
+.hero{
+  padding:calc(88px + clamp(52px,7vw,88px)) 0 clamp(56px,7vw,88px);
+  background:
+    radial-gradient(52% 50% at 6% 4%, rgba(90,81,198,.22), transparent 68%),
+    radial-gradient(44% 42% at 97% 8%, rgba(46,158,143,.2), transparent 70%),
+    radial-gradient(50% 50% at 84% 98%, rgba(239,159,39,.22), transparent 70%),
+    linear-gradient(168deg, #F7F5FC 0%, #EFEDF8 55%, #F4F0F7 100%);
+}
+.crumb{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;color:var(--muted);
+  margin:0 0 24px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.crumb a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+.crumb a:hover{color:var(--ink)}
+.crumb span{color:var(--indigo)}
+.hero-head{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:0 0 22px}
+/* The FilesTrace mark: the product's own tile colour and geometry, taken from the app itself
+   (apps/web/src/components/brand-mark.tsx), not recoloured to the Buddhyantra indigo. */
+.mark{
+  width:58px;height:58px;border-radius:27%;flex:none;
+  background:#2563EB;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 26px rgba(37,99,235,.32);
+}
+.mark svg{width:91%;height:auto;display:block}
+h1{font-family:var(--display);font-weight:500;letter-spacing:-.035em;
+  font-size:clamp(42px,6.4vw,80px);line-height:1;margin:0}
+h1 em{font-style:normal;color:var(--indigo)}
+.hero-line{font-family:var(--display);font-weight:400;letter-spacing:-.02em;
+  font-size:clamp(21px,2.7vw,31px);line-height:1.28;margin:0 0 22px;max-width:24ch}
+.hero-lede{font-size:clamp(17px,1.9vw,19.5px);color:var(--muted);max-width:60ch;margin:0 0 34px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-note{font-family:var(--mono);font-size:12.5px;color:var(--muted);letter-spacing:.04em}
+
+/* ---------- screenshot frame ---------- */
+.shot{
+  border-radius:14px;overflow:hidden;background:#FFF;
+  border:1px solid var(--line);
+  box-shadow:0 22px 60px -22px rgba(22,20,46,.4), 0 3px 10px rgba(22,20,46,.06);
+}
+.shot-bar{
+  display:flex;align-items:center;gap:7px;padding:11px 14px;
+  background:#F1F0F6;border-bottom:1px solid var(--line);
+}
+.shot-bar i{width:10px;height:10px;border-radius:50%;background:#D6D4E2;display:block}
+.shot-bar i:nth-child(1){background:#E4708A}
+.shot-bar i:nth-child(2){background:#EF9F27}
+.shot-bar i:nth-child(3){background:#2E9E8F}
+.shot-bar b{
+  margin-left:8px;font-family:var(--mono);font-size:11.5px;font-weight:400;
+  color:var(--muted);letter-spacing:.03em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.shot img{display:block;width:100%;height:auto}
+.hero-shot{margin-top:clamp(40px,5vw,60px)}
+figcaption{
+  font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--muted);
+  margin:14px 2px 0;line-height:1.5;
+}
+figure{margin:0}
+
+/* ---------- the claim ---------- */
+.claim{
+  background:
+    radial-gradient(46% 52% at 88% 8%, rgba(90,81,198,.4), transparent 68%),
+    radial-gradient(42% 50% at 4% 92%, rgba(239,159,39,.22), transparent 68%),
+    var(--ink);
+  color:var(--paper);
+}
+.claim .label{color:var(--marigold)}
+.claim h2{max-width:22ch}
+.claim p{color:rgba(243,242,248,.76);max-width:56ch;font-size:clamp(17px,1.8vw,19.5px)}
+.claim .rule{height:1px;background:rgba(243,242,248,.2);margin:46px 0 36px}
+.claim .aside{font-family:var(--mono);font-size:13.5px;color:rgba(243,242,248,.62);
+  letter-spacing:.03em;margin:0;max-width:64ch}
+
+/* ---------- feature rows ---------- */
+.feat{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(32px,4.4vw,64px);align-items:center}
+.feat + .feat{margin-top:clamp(72px,8vw,124px)}
+.feat.flip .feat-txt{order:2}
+.feat > *{min-width:0}
+.feat h3{font-family:var(--display);font-weight:500;letter-spacing:-.025em;
+  font-size:clamp(24px,2.7vw,33px);line-height:1.14;margin:0 0 16px}
+.feat p{margin:0;color:var(--muted);font-size:17px;line-height:1.66}
+.feat p + p{margin-top:14px}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;margin:0 0 14px}
+.k-indigo{color:var(--indigo)} .k-teal{color:var(--teal)}
+.k-marigold{color:#C57F12} .k-rose{color:#C9506A}
+
+/* ---------- facts ---------- */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:16px;
+  overflow:hidden;margin-top:52px}
+.fact{background:#FFF;padding:28px 26px 32px}
+.fact h4{font-family:var(--display);font-weight:500;font-size:19px;letter-spacing:-.02em;margin:0 0 9px}
+.fact p{margin:0;font-size:15.5px;color:var(--muted);line-height:1.58}
+.fact-t{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;color:var(--indigo);margin:0 0 16px}
+
+/* ---------- cta ---------- */
+.cta{
+  text-align:center;
+  background:
+    radial-gradient(38% 60% at 50% 0%, rgba(127,119,221,.18), transparent 70%),
+    radial-gradient(30% 50% at 12% 100%, rgba(239,159,39,.16), transparent 70%),
+    radial-gradient(30% 50% at 88% 100%, rgba(46,158,143,.14), transparent 70%),
+    var(--paper);
+}
+.cta h2{max-width:18ch;margin-inline:auto}
+.cta p{margin:0 auto 34px;max-width:50ch;color:var(--muted)}
+.cta-actions{display:flex;flex-direction:column;align-items:center;gap:16px}
+.cta .mail-hint{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;color:var(--muted);margin:8px 0 0}
+.mail-link{font-family:var(--display);font-size:clamp(21px,2.7vw,32px);font-weight:500;
+  letter-spacing:-.02em;color:var(--indigo);text-decoration:none;padding-bottom:4px;
+  border-bottom:2px solid rgba(90,81,198,.32);transition:color .2s,border-color .2s}
+.mail-link:hover{color:var(--indigo-deep);border-bottom-color:var(--indigo-deep)}
+
+.site-foot{border-top:1px solid var(--line);padding:38px 0 44px;background:var(--paper)}
+.foot-in{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.foot-in p{margin:0;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.foot-in a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+.foot-in a:hover{color:var(--ink)}
+
+@media (max-width:900px){
+  .head-in{height:78px}
+  .brand-tag{display:none}
+  .brand-name{font-size:22px}
+  .hero{padding-top:calc(78px + 46px)}
+  .feat{grid-template-columns:1fr;gap:26px}
+  .feat.flip .feat-txt{order:0}
+  .facts{grid-template-columns:1fr;margin-top:38px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="site-head" id="head">
+  <div class="wrap head-in">
+    <a class="brand" href="../index.html" aria-label="Buddhyantra, home">
+      <svg width="27" height="43" viewBox="0 0 74 118" aria-hidden="true">
+        <rect x="6" y="2" width="11" height="106" rx="5.5" fill="#5A51C6"/>
+        <path d="M11 62 L66 86 L11 110 Z" fill="none" stroke="#5A51C6" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="11.5" cy="54" r="7" fill="#EF9F27"/>
+      </svg>
+      <span class="brand-txt">
+        <span class="brand-name">Buddh<em>yantra</em></span>
+        <span class="brand-tag">Engineered, not assembled.</span>
+      </span>
+    </a>
+    <a class="btn btn-ghost" href="#talk">Start a conversation</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <p class="crumb"><a href="../index.html">Buddhyantra</a> / <a href="../index.html#products">Products</a> / <span>FilesTrace</span></p>
+
+    <div class="hero-head">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 104 98" fill="#FFFFFF">
+          <rect x="12" y="13" width="80" height="9" rx="3"/>
+          <rect x="12" y="24" width="15" height="61" rx="3"/>
+          <rect x="29" y="42" width="33" height="19" rx="3"/>
+          <rect x="29" y="63" width="63" height="22" rx="3"/>
+        </svg>
+      </span>
+      <h1>Files<em>Trace</em></h1>
+    </div>
+
+    <p class="hero-line">Where is this file, what’s its status, and who did what to it?</p>
+    <p class="hero-lede">FilesTrace is file tracking and status management for organisations that run on paperwork. Every file is filed under a department, moves through a status lifecycle you configure yourself, can be forwarded to another office, carries its attachments, and accumulates an append-only history of everything that happened to it. Ask the question at any hour and the answer is on the screen.</p>
+
+    <div class="hero-actions">
+      <a class="btn btn-lg" href="#talk">Request a walkthrough</a>
+      <span class="hero-note">built &amp; supported by Buddhyantra</span>
+    </div>
+
+    <figure class="hero-shot">
+      <div class="shot">
+        <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><b>FilesTrace — Dashboard</b></div>
+        <img src="../assets/filestrace/dashboard.jpg" width="1556" height="784"
+             alt="The FilesTrace dashboard: counters for total, open and closed files, median turnaround, an ageing breakdown of open files, and bar charts splitting files by status, department, who they were forwarded to, and who recommended them.">
+      </div>
+      <figcaption>The dashboard, filtered to the last 30 days. Every bar is a link — clicking one opens the file list already narrowed to it.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band claim">
+  <div class="wrap reveal">
+    <p class="label">why it exists</p>
+    <h2>A file nobody can find is a decision nobody can make.</h2>
+    <p>Most offices already track files. In a register, in a spreadsheet, in the memory of the one clerk who has been there longest. It works until somebody is on leave, until two departments each think the other has it, until a petitioner rings to ask what happened and the honest answer is that nobody knows.</p>
+    <div class="rule"></div>
+    <p class="aside">FilesTrace does not ask an office to change how it works. It records what it already does — accurately, in one place, with a history that cannot be quietly rewritten.</p>
+  </div>
+</section>
+
+<section class="band band-paper">
+  <div class="wrap">
+
+    <div class="feat reveal">
+      <div class="feat-txt">
+        <p class="kicker k-indigo">the register</p>
+        <h3>Every file, one list.</h3>
+        <p>Each file gets a docket number the moment it is created — the one human-readable handle everyone in the office can say out loud. From there it is searchable by docket, contact, subject or address, and filterable by department, status, ward, date and who recommended it.</p>
+        <p>The same filters drive the PDF export, so a printed list is always the list that was on the screen.</p>
+      </div>
+      <figure>
+        <div class="shot">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><b>FilesTrace — Files</b></div>
+          <img src="../assets/filestrace/files.jpg" width="1556" height="784"
+               alt="The FilesTrace file list: rows showing docket number, date, department, contact, subject, who recommended it, and a coloured status badge.">
+        </div>
+      </figure>
+    </div>
+
+    <div class="feat flip reveal">
+      <div class="feat-txt">
+        <p class="kicker k-teal">the record</p>
+        <h3>A history nobody can quietly rewrite.</h3>
+        <p>Registered, commented, status changed, forwarded, attachment added — every event is appended to the file’s history with who did it and when. Nothing in the app edits or removes an entry.</p>
+        <p>That is the difference between a system that tells you where a file is and one that can tell you where it has been. When a decision is questioned six months later, the trail is the answer.</p>
+      </div>
+      <figure>
+        <div class="shot">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><b>FilesTrace — File detail</b></div>
+          <img src="../assets/filestrace/file-detail.jpg" width="1556" height="784"
+               alt="A single FilesTrace file: its details on the left — subject, department, contact, ward, instructions — and on the right a history panel listing that it was registered, its status changed, a comment added, and it was forwarded, each stamped with the user and time.">
+        </div>
+      </figure>
+    </div>
+
+    <div class="feat reveal">
+      <div class="feat-txt">
+        <p class="kicker k-marigold">the lifecycle</p>
+        <h3>Configured by the office, not by us.</h3>
+        <p>Departments are set up in the app, and each one carries its own status lifecycle, in its own order, with its own colours — and its own set of form fields, so a department that never needs a ward doesn’t see one.</p>
+        <p>A status that has been used can’t be deleted, only deactivated. Historical files keep pointing at the status they were actually in, which is the only version of the past worth keeping.</p>
+      </div>
+      <figure>
+        <div class="shot">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><b>FilesTrace — Status lifecycle</b></div>
+          <img src="../assets/filestrace/statuses.jpg" width="1556" height="784"
+               alt="A department's status lifecycle in FilesTrace: New, Open, In Progress, Non Ministry In Progress, Pending, Closed and Discarded, each re-orderable, colour-coded, and markable as the default or the on-forward status.">
+        </div>
+      </figure>
+    </div>
+
+    <div class="feat flip reveal">
+      <div class="feat-txt">
+        <p class="kicker k-rose">the permissions</p>
+        <h3>Access shaped like the office.</h3>
+        <p>Real offices don’t divide neatly into “admin” and “user”. A section officer sees four departments and can act in two of them; an attendant can look but not touch; a private secretary needs the shared diary and nothing else.</p>
+        <p>Groups span any number of departments, each with its own view / create / edit / delete rights, plus the same four for the calendar and the RTI register. A person’s access is the union of the groups they’re in.</p>
+      </div>
+      <figure>
+        <div class="shot">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><b>FilesTrace — User groups</b></div>
+          <img src="../assets/filestrace/groups.jpg" width="1556" height="784"
+               alt="The FilesTrace user groups screen: rows for Addl. PS, Assistant PA, Clerk, Office Attendant, PA, Private Secretary and Section Officer, each showing per-department view, create, edit and delete privileges.">
+        </div>
+      </figure>
+    </div>
+
+    <div class="feat reveal">
+      <div class="feat-txt">
+        <p class="kicker k-indigo">the day</p>
+        <h3>The diary, in the same place as the work.</h3>
+        <p>A shared day view for the appointments, site visits and review meetings the files generate — with the contact, the phone number, and a meeting link when it’s a video call. One day at a time, because that is how an office actually reads its own diary.</p>
+        <p>Any day exports to a PDF, which is still how most offices circulate a schedule.</p>
+      </div>
+      <figure>
+        <div class="shot">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><b>FilesTrace — Calendar</b></div>
+          <img src="../assets/filestrace/calendar.jpg" width="1556" height="784"
+               alt="The FilesTrace calendar day view for a Friday: seven events from a 9:30 public grievance sitting through department reviews to a 4pm road safety audit walkthrough, laid out on an hourly grid.">
+        </div>
+      </figure>
+    </div>
+
+    <div class="feat flip reveal">
+      <div class="feat-txt">
+        <p class="kicker k-teal">the register beside the register</p>
+        <h3>RTI applications, tracked to the deadline.</h3>
+        <p>A statutory register with its own screen: file number, when the application arrived, who sent it, what was asked for, the fee realised, and the date a reply was issued. Pending and answered are the two states that matter, and the list makes it obvious which is which.</p>
+        <p>Filterable, searchable, and exportable to PDF in the shape an audit expects to receive it.</p>
+      </div>
+      <figure>
+        <div class="shot">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><b>FilesTrace — RTI Act register</b></div>
+          <img src="../assets/filestrace/rti.jpg" width="1556" height="784"
+               alt="The FilesTrace RTI Act case register: six cases with file number, received date, petitioner, the information sought, the reply date, the amount realised, and a pending or done badge.">
+        </div>
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="label">how it's built</p>
+      <h2>Boring where it counts.</h2>
+      <p class="lede">Nothing here is clever for its own sake. An office that keeps its records in this should be able to keep them for a decade without an upgrade it didn’t ask for.</p>
+    </div>
+
+    <div class="facts reveal">
+      <article class="fact">
+        <p class="fact-t">tenancy</p>
+        <h4>One instance, many organisations</h4>
+        <p>Each organisation owns its departments, its users and its files, and can’t see past its own boundary. People who genuinely belong to two get a switcher, not a second login.</p>
+      </article>
+      <article class="fact">
+        <p class="fact-t">storage</p>
+        <h4>Attachments with a retention story</h4>
+        <p>Images, PDFs and audio attach to a file. Deleting one marks it deleted and keeps the record; the object itself is purged after a grace window, so an accident is recoverable and a deletion is real.</p>
+      </article>
+      <article class="fact">
+        <p class="fact-t">deployment</p>
+        <h4>Self-hosted, on your own database</h4>
+        <p>PostgreSQL and a single container. No queue to babysit, no cache to warm, no third-party service holding your records. It runs on a modest server and it runs offline of us.</p>
+      </article>
+      <article class="fact">
+        <p class="fact-t">paper</p>
+        <h4>PDF exports that match the screen</h4>
+        <p>The file list, a single file, an RTI register and a calendar day all export. The export takes the same filters the screen applied — a printed list that quietly ignored one would misrepresent itself.</p>
+      </article>
+      <article class="fact">
+        <p class="fact-t">devices</p>
+        <h4>Mobile-first, not mobile-tolerated</h4>
+        <p>Built for the phone in a pocket at a site visit as much as the desktop at the counter. The same screens, laid out for the device actually in hand.</p>
+      </article>
+      <article class="fact">
+        <p class="fact-t">handover</p>
+        <h4>Your data, exportable, yours</h4>
+        <p>Set-up, migration of what you already hold, and training for the staff who will use it daily. If you later want it run somewhere else, it goes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band cta" id="talk">
+  <div class="wrap reveal">
+    <p class="label">see it properly</p>
+    <h2>Bring us a week of your files.</h2>
+    <p>The fastest way to judge FilesTrace is against your own paperwork. Tell us how your office files, forwards and closes things, and we’ll show you the same flow running in it.</p>
+    <div class="cta-actions">
+      <a class="btn btn-lg" href="mailto:hello@buddhyantra.com?subject=FilesTrace%20—%20request%20a%20walkthrough">Request a walkthrough</a>
+      <p class="mail-hint">or write to us directly</p>
+      <a class="mail-link" href="mailto:hello@buddhyantra.com">hello@buddhyantra.com</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-in">
+    <p>FilesTrace · a product of <a href="../index.html">Buddhyantra</a></p>
+    <p><a href="mailto:hello@buddhyantra.com">hello@buddhyantra.com</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var head = document.getElementById('head');
+  function onScroll(){ head.classList.toggle('stuck', (window.scrollY || window.pageYOffset) > 20); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+    [].slice.call(document.querySelectorAll('.reveal')).forEach(function(el){ io.observe(el); });
+  } else {
+    [].slice.call(document.querySelectorAll('.reveal')).forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
