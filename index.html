@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Buddhyantra — Engineered, not assembled.</title>
-<meta name="description" content="An India-registered AI expertise company. Digital products with AI applied where it earns its place, SDLC consultancy and engineer training, and decisions built on the data you already hold.">
+
+<title>Buddhyantra — AI Consulting &amp; Custom Apps in Indian Languages</title>
+<meta name="description" content="Buddhyantra connects organisations with citizens and customers on WhatsApp, voice and paper, in Indian languages — then builds the AI that routes, triages and follows up.">
+<meta name="keywords" content="AI consulting, AI consulting India, IT services, IT consultancy, custom made apps, custom app development, low code solutions, low code development, AI for business, AI for government departments, data engineering, customer data engineering, Indian language software, multilingual citizen services">
+<link rel="canonical" href="https://buddhyantra.com/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Buddhyantra">
+
+<!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Buddhyantra">
+<meta property="og:url" content="https://buddhyantra.com/">
+<meta property="og:title" content="Buddhyantra — AI Consulting &amp; Custom Apps in Indian Languages">
+<meta property="og:description" content="Take WhatsApp voice notes, phone calls and scanned paper in any Indian language into one queue — then let AI route, triage and follow up. Engineered, not assembled.">
+<meta property="og:image" content="https://buddhyantra.com/assets/og-home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Buddhyantra — engineered, not assembled. AI consulting and custom software in Indian languages.">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Buddhyantra — AI Consulting &amp; Custom Apps in Indian Languages">
+<meta name="twitter:description" content="Take WhatsApp voice notes, phone calls and scanned paper in any Indian language into one queue — then let AI route, triage and follow up.">
+<meta name="twitter:image" content="https://buddhyantra.com/assets/og-home.png">
+<meta name="twitter:image:alt" content="Buddhyantra — engineered, not assembled.">
+
 <meta name="theme-color" content="#5A51C6">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='22'%20fill='%235A51C6'/%3E%3Cg%20transform='translate(25.5,12.7)%20scale(.64)'%3E%3Crect%20x='6'%20y='2'%20width='11'%20height='106'%20rx='5.5'%20fill='%23ffffff'/%3E%3Cpath%20d='M11%2062%20L66%2086%20L11%20110%20Z'%20fill='none'%20stroke='%23ffffff'%20stroke-width='11'%20stroke-linejoin='round'%20stroke-linecap='round'/%3E%3Ccircle%20cx='11.5'%20cy='54'%20r='8.5'%20fill='%23EF9F27'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -254,13 +279,16 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
   transition:opacity .7s ease,transform .8s cubic-bezier(.2,.9,.3,1)}
 .reveal.in{opacity:1;transform:none}
 
-.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+/* Four offers, so a 2×2 grid rather than a row — a fourth column would squeeze the
+   copy past the point where the paragraphs read. */
+.offers{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
   background:var(--line);border:1px solid var(--line);border-radius:16px;
   overflow:hidden;margin-top:56px}
 .offer{padding:34px 30px 38px}
 .offer-a{background:linear-gradient(165deg,rgba(90,81,198,.11),rgba(255,255,255,0) 58%),#FFF}
 .offer-b{background:linear-gradient(165deg,rgba(46,158,143,.13),rgba(255,255,255,0) 58%),#FFF}
 .offer-c{background:linear-gradient(165deg,rgba(239,159,39,.15),rgba(255,255,255,0) 58%),#FFF}
+.offer-d{background:linear-gradient(165deg,rgba(228,112,138,.13),rgba(255,255,255,0) 58%),#FFF}
 .offer .who{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);margin:0 0 20px}
 .offer h3{font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:-.02em;margin:0 0 12px}
 .offer p{margin:0;font-size:16px;color:var(--muted);line-height:1.6}
@@ -301,6 +329,7 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
 .prod-pts li:nth-child(2)::before{background:var(--marigold)}
 .prod-pts li:nth-child(3)::before{background:var(--teal)}
 .prod-pts li:nth-child(4)::before{background:var(--rose)}
+.prod-pts li:nth-child(5)::before{background:var(--lav)}
 .prod-more{
   display:inline-flex;align-items:center;gap:9px;text-decoration:none;
   font-family:var(--body);font-size:15px;font-weight:500;
@@ -322,6 +351,57 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
 .prod-shot .bar i:nth-child(2){background:#EF9F27}
 .prod-shot .bar i:nth-child(3){background:#2E9E8F}
 .prod-shot img{display:block;width:100%;height:auto}
+
+/* ---------- intake flow ---------- */
+/* Three steps on the dark band. The `.claim p` rule below is broader than these, so every
+   text rule here is scoped through `.claim` to win on specificity rather than order. */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);
+  gap:18px;margin:52px 0 0;padding:0}
+.step{position:relative;padding:28px 26px 30px;border-radius:14px;
+  background:rgba(243,242,248,.06);border:1px solid rgba(243,242,248,.15)}
+.step:not(:last-child)::after{
+  content:"";position:absolute;right:-13px;top:50%;width:9px;height:9px;
+  border-top:2px solid rgba(243,242,248,.34);border-right:2px solid rgba(243,242,248,.34);
+  transform:translateY(-50%) rotate(45deg);
+}
+.step-n{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.1em;
+  color:var(--marigold);margin:0 0 16px}
+.claim .step h3{font-family:var(--display);font-weight:500;font-size:20px;
+  letter-spacing:-.02em;line-height:1.26;margin:0 0 12px;color:var(--paper)}
+.claim .step p{margin:0;font-size:15.5px;line-height:1.62;
+  color:rgba(243,242,248,.74);max-width:none}
+.chans{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin:20px 0 0;padding:0}
+.chans li{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;
+  padding:5px 11px;border-radius:999px;
+  border:1px solid rgba(243,242,248,.22);color:rgba(243,242,248,.76)}
+
+/* ---------- languages strip ---------- */
+.tongues{display:flex;flex-wrap:wrap;gap:10px;margin:38px 0 0;padding:0;list-style:none}
+.tongues li{
+  font-family:var(--mono);font-size:13px;letter-spacing:.02em;
+  padding:7px 15px;border-radius:999px;
+  border:1px solid rgba(243,242,248,.22);color:rgba(243,242,248,.82);
+}
+.tongues li span{color:rgba(243,242,248,.45);margin-left:7px}
+
+/* ---------- faq ---------- */
+.faq{margin-top:52px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{
+  list-style:none;cursor:pointer;padding:22px 44px 22px 0;position:relative;
+  font-family:var(--display);font-weight:500;font-size:clamp(18px,2.1vw,22px);
+  letter-spacing:-.018em;line-height:1.32;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";position:absolute;right:8px;top:50%;width:13px;height:13px;
+  border-right:2px solid var(--indigo);border-bottom:2px solid var(--indigo);
+  transform:translateY(-70%) rotate(45deg);transition:transform .3s;
+}
+.faq details[open] summary::after{transform:translateY(-20%) rotate(-135deg)}
+.faq summary:hover{color:var(--indigo)}
+.faq .answer{margin:0 0 26px;padding-right:44px;max-width:74ch;
+  font-size:16.5px;line-height:1.66;color:var(--muted)}
 
 .claim{
   background:
@@ -372,6 +452,8 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
   .fb1,.fb3{display:none}
   .offers{grid-template-columns:1fr;margin-top:40px}
   .prod{grid-template-columns:1fr;margin-top:40px}
+  .flow{grid-template-columns:1fr;margin-top:38px}
+  .step:not(:last-child)::after{display:none}
 }
 /* The header is the one row that can't reflow — the button is `nowrap` and the company name
    shouldn't truncate — so below 600px both sides step down instead of colliding. */
@@ -397,6 +479,196 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
   .cam{transform:none}
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://buddhyantra.com/#organization",
+      "name": "Buddhyantra",
+      "alternateName": ["Buddhyantra Technologies", "बुद्धियन्त्र"],
+      "url": "https://buddhyantra.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://buddhyantra.com/assets/buddhyantra-logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://buddhyantra.com/assets/og-home.png",
+      "email": "hello@buddhyantra.com",
+      "slogan": "Engineered, not assembled.",
+      "description": "Buddhyantra builds the connection between organisations and the people they serve — citizens with government departments, customers with businesses — in the Indian languages those people actually speak, and the AI that manages what comes back.",
+      "knowsAbout": [
+        "AI consulting",
+        "IT services",
+        "IT consultancy",
+        "Custom application development",
+        "Low-code solutions",
+        "Data engineering",
+        "Indian language natural language processing",
+        "Software development lifecycle consulting"
+      ],
+      "knowsLanguage": [
+        { "@type": "Language", "name": "English", "alternateName": "en" },
+        { "@type": "Language", "name": "Hindi", "alternateName": "hi" },
+        { "@type": "Language", "name": "Malayalam", "alternateName": "ml" },
+        { "@type": "Language", "name": "Tamil", "alternateName": "ta" },
+        { "@type": "Language", "name": "Telugu", "alternateName": "te" },
+        { "@type": "Language", "name": "Kannada", "alternateName": "kn" },
+        { "@type": "Language", "name": "Marathi", "alternateName": "mr" },
+        { "@type": "Language", "name": "Bengali", "alternateName": "bn" }
+      ],
+      "areaServed": { "@type": "Country", "name": "India" },
+      "address": { "@type": "PostalAddress", "addressCountry": "IN" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "hello@buddhyantra.com",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Malayalam", "Hindi"]
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://buddhyantra.com/#service",
+      "name": "Buddhyantra — AI consulting and custom software",
+      "parentOrganization": { "@id": "https://buddhyantra.com/#organization" },
+      "url": "https://buddhyantra.com/",
+      "areaServed": { "@type": "Country", "name": "India" },
+      "serviceType": ["AI consulting", "IT services", "Custom application development", "Data engineering"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "What Buddhyantra does",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom made apps in Indian languages",
+              "description": "Web and mobile applications that put a citizen or a customer in direct contact with the organisation serving them, built to work in the Indian languages those people actually speak."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Multilingual, multi-channel intake",
+              "description": "WhatsApp, voice notes, phone calls, SMS, email, web forms and scanned paper, taken in whatever Indian language the person used — speech transcribed in that language, documents read into fields, and the reply sent back on the same channel in the same language."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI for your business or organisation",
+              "description": "Routing, triage, summarisation and follow-up over the messages, applications and complaints your channels generate — AI applied where it earns its place."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Data engineering with customer data",
+              "description": "Pipelines, warehousing and modelling over the operational and customer data you already hold, turned into forecasts, patterns and decisions."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IT consultancy and engineer training",
+              "description": "SDLC review, repository restructuring, low-code tool selection, and AI training for your own engineers."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://buddhyantra.com/#website",
+      "url": "https://buddhyantra.com/",
+      "name": "Buddhyantra",
+      "publisher": { "@id": "https://buddhyantra.com/#organization" },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://buddhyantra.com/#webpage",
+      "url": "https://buddhyantra.com/",
+      "name": "Buddhyantra — AI Consulting & Custom Apps in Indian Languages",
+      "description": "Buddhyantra connects organisations with citizens and customers on WhatsApp, voice and paper, in Indian languages — then builds the AI that routes, triages and follows up.",
+      "isPartOf": { "@id": "https://buddhyantra.com/#website" },
+      "about": { "@id": "https://buddhyantra.com/#organization" },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://buddhyantra.com/#faq",
+      "isPartOf": { "@id": "https://buddhyantra.com/#webpage" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Buddhyantra actually do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Two things that belong together. We build the channel an organisation meets its people through — a citizen portal, a grievance app, a customer-facing service, in the languages those people speak. Then we build the AI that manages what comes back through it: routing, triage, follow-up, and the reporting that falls out of the data it generates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with government departments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and it is a large part of what we do. Public offices carry the hardest version of the problem: statutory deadlines, an audit trail that has to hold up, and a public that does not share one language. FilesTrace, our file tracking and RTI register product, came directly out of that work and is in daily use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Indian languages do you support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Malayalam, Hindi, Tamil, Telugu, Kannada, Marathi, Bengali and English are the ones we work in most, and adding one is a configuration job rather than a rebuild. It holds across channels as well as inside the database: a WhatsApp voice note in Malayalam is transcribed in Malayalam, triaged in Malayalam and answered in Malayalam, with no English round trip in the middle to lose the meaning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can people reach us on WhatsApp instead of a portal or a form?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and in our experience it is the channel that actually gets used. We take WhatsApp messages, voice notes, photographed paper forms, phone calls, SMS, email and web forms into the same queue, so the office works one list instead of seven inboxes. Voice becomes text in the language it was spoken, documents are read into fields, and the reply goes back out on the channel it came in on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you build with low-code tools or write everything from scratch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Whichever one is honest for the problem. Internal tools, approval flows and back-office screens are often faster and cheaper on a low-code platform, and we will say so. The parts that carry your differentiation, your scale or your audit trail get written properly. What we will not do is hand you a platform you cannot leave."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "We already have years of customer data. Can you do something with it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That is usually the fastest win available. Most organisations are paying to store operational and customer data that answers no questions. We do the data engineering — pipelines, cleaning, modelling, a warehouse you can query — and then the analysis: what the patterns say, what to forecast, and which decisions were being made on instinct."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you an AI company or an IT services company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are engineers who use AI where it earns its place. A great deal of what an organisation needs is ordinary IT services done well — a system that stays up, an integration that holds, a migration that does not lose records. We do that work, and we add AI to it when there is a real reason, not to have added AI."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -413,7 +685,8 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
         <span class="brand-tag">Engineered, not assembled.</span>
       </span>
     </a>
-    <nav class="head-nav">
+    <nav class="head-nav" aria-label="Primary">
+      <a class="head-link" href="#what-we-do">What we do</a>
       <a class="head-link" href="#products">Products</a>
       <a class="btn btn-ghost" href="#talk">Start a conversation</a>
     </nav>
@@ -436,7 +709,7 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
           <h1 class="sentence">
             <span class="line line-1 on">There is a</span>
             <span class="line line-2">better way to</span>
-            <span class="line line-3">handle it<span class="dot">.</span></span>
+            <span class="line line-3">build it<span class="dot">.</span></span>
           </h1>
           <div class="ph-layer" aria-hidden="true">
             <span class="ph ph-2"><i></i><i></i><i></i></span>
@@ -618,12 +891,12 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
   </div>
 </section>
 
-<section class="band band-paper">
+<section class="band band-paper" id="what-we-do">
   <div class="wrap">
     <div class="reveal">
       <p class="label">what we do</p>
-      <h2>Expertise, applied honestly.</h2>
-      <p class="lede">We're a small, deeply technical team of architects, engineers and AI specialists. Not a sales-led shop. The people who scope your work are the people who build it.</p>
+      <h2>AI consulting and IT services, applied honestly.</h2>
+      <p class="lede">Buddhyantra is a small, deeply technical team of architects and engineers. Not a sales-led shop — the people who scope your work are the people who build it. We do two things that belong together: the channel your organisation meets its people through, and the AI that manages everything coming back through it.</p>
     </div>
 
     <div class="offers reveal">
@@ -633,9 +906,9 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
           <rect x="31" y="19" width="26" height="14" rx="4" fill="var(--indigo)" opacity=".35"/>
           <rect x="16" y="1" width="26" height="14" rx="4" fill="var(--marigold)"/>
         </svg>
-        <p class="who">build</p>
-        <h3>Products that run your day</h3>
-        <p>Mobile and web products shaped around the process you actually follow, with AI applied where it earns its place rather than everywhere at once. Legacy systems get carried across, not ripped out — the work you've already done stays yours.</p>
+        <p class="who">connect</p>
+        <h3>Custom made apps people will actually use</h3>
+        <p>Web and mobile applications that put a citizen in front of a government department, or a customer in front of your business, without a middleman. Shaped around the process you actually follow — and built in the language the person on the other end reads, types and speaks in. Legacy systems get carried across, not ripped out.</p>
       </article>
 
       <article class="offer offer-b">
@@ -644,9 +917,9 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
           <rect x="31" y="19" width="26" height="14" rx="4" fill="var(--teal)"/>
           <rect x="16" y="1" width="26" height="14" rx="4" fill="var(--indigo)"/>
         </svg>
-        <p class="who">advise</p>
-        <h3>Consultancy for how you ship</h3>
-        <p>SDLC review, repository restructuring, and AI training for your engineers. We start by finding where the work genuinely hurts — the handoffs, the merge queue, the release nobody wants to run — and build process around that instead of around a diagram.</p>
+        <p class="who">automate</p>
+        <h3>AI for your business or organisation</h3>
+        <p>Open a channel and it fills up. We build the AI that manages what comes back: classifying and routing to the right desk, triaging what is urgent, summarising a thread before a human opens it, and chasing the follow-up nobody has time to chase. Applied where it earns its place, not everywhere at once.</p>
       </article>
 
       <article class="offer offer-c">
@@ -656,10 +929,67 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
           <rect x="16" y="1" width="26" height="14" rx="4" fill="var(--marigold)"/>
         </svg>
         <p class="who">decide</p>
-        <h3>Don't sleep on your data</h3>
-        <p>Most businesses are sitting on years of operational data doing nothing but taking up storage. We turn it into something you can make decisions with — forecasts, patterns, the questions you didn't know to ask. This is where the advantage is going.</p>
+        <h3>Data engineering on the customer data you already hold</h3>
+        <p>Most organisations are paying to store years of operational and customer data that answers no questions. We do the pipelines, the cleaning, the modelling and the warehouse — then the part that pays for it: forecasts, patterns, and the decisions that were quietly being made on instinct.</p>
+      </article>
+
+      <article class="offer offer-d">
+        <svg class="glyph" width="60" height="34" viewBox="0 0 60 34" aria-hidden="true">
+          <rect x="1" y="19" width="26" height="14" rx="4" fill="var(--lav)"/>
+          <rect x="31" y="19" width="26" height="14" rx="4" fill="var(--marigold)"/>
+          <rect x="16" y="1" width="26" height="14" rx="4" fill="var(--teal)"/>
+        </svg>
+        <p class="who">advise</p>
+        <h3>IT consultancy for how you ship</h3>
+        <p>SDLC review, repository restructuring, low-code tool selection, and AI training for your own engineers. We start by finding where the work genuinely hurts — the handoffs, the merge queue, the release nobody wants to run — and build process around that instead of around a diagram.</p>
       </article>
     </div>
+  </div>
+</section>
+
+<section class="band claim" id="how-it-works">
+  <div class="wrap reveal">
+    <p class="label">how it works</p>
+    <h2>Any channel. Any language. One system.</h2>
+    <p>A citizen with a grievance is not going to log into a portal and fill a form in English. They will send a two-minute WhatsApp voice note in Malayalam, or photograph a paper application and send that instead. Multi-channel and multilingual intake is the whole problem — and it is the part most systems quietly push back onto the person who needed help.</p>
+
+    <ol class="flow">
+      <li class="step">
+        <span class="step-n">01 — in</span>
+        <h3>It arrives however they’re comfortable</h3>
+        <p>A WhatsApp voice note. A photo of a filled-in form. A phone call, an SMS, an email, a web form, or a walk-in at the counter. Nobody is asked to change language or channel in order to be heard, and no one channel is the “real” one.</p>
+        <ul class="chans">
+          <li>WhatsApp</li><li>voice note</li><li>phone call</li><li>SMS</li>
+          <li>email</li><li>web form</li><li>scanned paper</li>
+        </ul>
+      </li>
+
+      <li class="step">
+        <span class="step-n">02 — understood</span>
+        <h3>Speech and paper become something the system can act on</h3>
+        <p>Voice is transcribed in the language it was spoken, not translated into English first. Photographed forms, PDFs and letters are read into real fields. A rambling three-minute message becomes a subject, a department, a priority and a contact — with the original audio and scan kept beside it, because a transcript is evidence of a record, never the record.</p>
+      </li>
+
+      <li class="step">
+        <span class="step-n">03 — out</span>
+        <h3>The answer goes back the way it came</h3>
+        <p>Routed to the desk that can actually act, chased if it stalls, and answered on the same channel in the same language it arrived in. A petitioner who asked in Tamil is answered in Tamil — and the officer or the business owner replying never had to read or write a word of it.</p>
+      </li>
+    </ol>
+
+    <ul class="tongues">
+      <li>മലയാളം <span>Malayalam</span></li>
+      <li>हिन्दी <span>Hindi</span></li>
+      <li>தமிழ் <span>Tamil</span></li>
+      <li>తెలుగు <span>Telugu</span></li>
+      <li>ಕನ್ನಡ <span>Kannada</span></li>
+      <li>मराठी <span>Marathi</span></li>
+      <li>বাংলা <span>Bengali</span></li>
+      <li>English</li>
+    </ul>
+
+    <div class="rule"></div>
+    <p class="aside">Adding a language or a channel is configuration, not a rebuild.</p>
   </div>
 </section>
 
@@ -668,7 +998,7 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
     <div class="reveal">
       <p class="label">products</p>
       <h2>Things we built, and still run.</h2>
-      <p class="lede">Not demos. Software in daily use by the organisations it was made for — which is also why we keep supporting it long after the invoice cleared.</p>
+      <p class="lede">Not demos. Software in daily use by the organisations it was made for — which is also why we keep supporting it long after the invoice cleared. Each one started as the same conversation: an office drowning in what the public sends it.</p>
     </div>
 
     <article class="prod reveal">
@@ -686,9 +1016,10 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
         </div>
 
         <p class="prod-line">Where is this file, what’s its status, and who did what to it?</p>
-        <p class="prod-body">FilesTrace is built for organisations that run on files. Every file is filed under a department, moves through a status lifecycle the office configures itself, can be forwarded to another desk, carries its attachments, and keeps an append-only history of everything that happened to it. When somebody rings to ask what happened to their application, the answer is on the screen instead of in someone’s memory.</p>
+        <p class="prod-body">FilesTrace is file tracking for government departments and organisations that run on paperwork. A citizen sends a voice note or a photo of a form; it comes back as a summarised file with the department, status and next desk already suggested. Every file is filed under a department, moves through a status lifecycle the office configures itself, can be forwarded to another desk, carries its attachments, and keeps an append-only history of everything that happened to it. When a citizen rings to ask what happened to their application, the answer is on the screen instead of in someone’s memory.</p>
 
         <ul class="prod-pts">
+          <li>Voice notes and documents transcribed, summarised by AI, with the department, status and next desk suggested</li>
           <li>Departments, wards and a status lifecycle you set up yourself — no code, no support ticket</li>
           <li>A history that records every comment, forward and status change, and never lets one be edited away</li>
           <li>Group-based access that spans departments, plus a shared calendar and an RTI Act register</li>
@@ -712,11 +1043,58 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
   </div>
 </section>
 
+<section class="band band-paper" id="faq">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="label">questions</p>
+      <h2>The things people ask first.</h2>
+      <p class="lede">Usually before the second email. Answered here so the first conversation can start somewhere more interesting.</p>
+    </div>
+
+    <div class="faq reveal">
+      <details>
+        <summary>What does Buddhyantra actually do?</summary>
+        <p class="answer">Two things that belong together. We build the channel an organisation meets its people through — a citizen portal, a grievance app, a customer-facing service, in the languages those people speak. Then we build the AI that manages what comes back through it: routing, triage, follow-up, and the reporting that falls out of the data it generates.</p>
+      </details>
+
+      <details>
+        <summary>Do you work with government departments?</summary>
+        <p class="answer">Yes, and it is a large part of what we do. Public offices carry the hardest version of the problem: statutory deadlines, an audit trail that has to hold up, and a public that does not share one language. <a href="products/filestrace.html">FilesTrace</a>, our file tracking and RTI register product, came directly out of that work and is in daily use.</p>
+      </details>
+
+      <details>
+        <summary>Which Indian languages do you support?</summary>
+        <p class="answer">Malayalam, Hindi, Tamil, Telugu, Kannada, Marathi, Bengali and English are the ones we work in most, and adding one is a configuration job rather than a rebuild. It holds across channels as well as inside the database: a WhatsApp voice note in Malayalam is transcribed in Malayalam, triaged in Malayalam and answered in Malayalam, with no English round trip in the middle to lose the meaning.</p>
+      </details>
+
+      <details>
+        <summary>Can people reach us on WhatsApp instead of a portal or a form?</summary>
+        <p class="answer">Yes, and in our experience it is the channel that actually gets used. We take WhatsApp messages, voice notes, photographed paper forms, phone calls, SMS, email and web forms into the same queue, so the office works one list instead of seven inboxes. Voice becomes text in the language it was spoken, documents are read into fields, and the reply goes back out on the channel it came in on.</p>
+      </details>
+
+      <details>
+        <summary>Do you build with low-code tools or write everything from scratch?</summary>
+        <p class="answer">Whichever one is honest for the problem. Internal tools, approval flows and back-office screens are often faster and cheaper on a low-code platform, and we will say so. The parts that carry your differentiation, your scale or your audit trail get written properly. What we will not do is hand you a platform you cannot leave.</p>
+      </details>
+
+      <details>
+        <summary>We already have years of customer data. Can you do something with it?</summary>
+        <p class="answer">That is usually the fastest win available. Most organisations are paying to store operational and customer data that answers no questions. We do the data engineering — pipelines, cleaning, modelling, a warehouse you can query — and then the analysis: what the patterns say, what to forecast, and which decisions were being made on instinct.</p>
+      </details>
+
+      <details>
+        <summary>Are you an AI company or an IT services company?</summary>
+        <p class="answer">We are engineers who use AI where it earns its place. A great deal of what an organisation needs is ordinary IT services done well — a system that stays up, an integration that holds, a migration that does not lose records. We do that work, and we add AI to it when there is a real reason, not to have added AI.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="band cta" id="talk">
   <div class="wrap reveal">
     <p class="label">start here</p>
     <h2>Tell us what isn't working.</h2>
-    <p>Bring the messy version. A stalled pilot, a vague board mandate, a process nobody wants to touch. We'll tell you honestly whether AI is the answer.</p>
+    <p>Bring the messy version. A queue nobody is clearing, a helpline in one language for a public that speaks four, a stalled AI pilot, a vague board mandate. We'll tell you honestly whether AI is the answer.</p>
     <div class="cta-actions">
       <a class="btn btn-lg" href="mailto:hello@buddhyantra.com?subject=Starting%20a%20conversation">Start a conversation</a>
       <p class="mail-hint">or write to us directly</p>
@@ -729,8 +1107,15 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
 
 <footer class="site-foot">
   <div class="wrap foot-in">
-    <p>Buddhyantra · बुद्धि + यन्त्र · the instrument of intelligence</p>
-    <p><a href="mailto:hello@buddhyantra.com">hello@buddhyantra.com</a></p>
+    <p>Buddhyantra · बुद्धि + यन्त्र · the instrument of intelligence · India</p>
+    <nav aria-label="Footer">
+      <p>
+        <a href="#what-we-do">What we do</a> ·
+        <a href="products/filestrace.html">FilesTrace</a> ·
+        <a href="#faq">Questions</a> ·
+        <a href="mailto:hello@buddhyantra.com">hello@buddhyantra.com</a>
+      </p>
+    </nav>
   </div>
 </footer>
 

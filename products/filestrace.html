@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FilesTrace — file tracking for organisations · Buddhyantra</title>
-<meta name="description" content="FilesTrace is file tracking and status management for organisations. Departments, a configurable status lifecycle, forwarding between offices, attachments, and an append-only history of everything that happened to a file.">
+
+<title>FilesTrace — File Tracking Software for Government Offices</title>
+<meta name="description" content="FilesTrace is file tracking for government departments and organisations. Voice notes and scanned documents are transcribed, AI writes the summary and suggests the department, status and desk — over a configurable lifecycle and an append-only history.">
+<meta name="keywords" content="file tracking software, file tracking system, AI file summary, voice note to text, AI document triage, government file management software, RTI register software, office file movement tracking, docket tracking, self-hosted file tracking, India">
+<link rel="canonical" href="https://buddhyantra.com/products/filestrace.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Buddhyantra">
+
+<!-- Open Graph -->
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Buddhyantra">
+<meta property="og:url" content="https://buddhyantra.com/products/filestrace.html">
+<meta property="og:title" content="FilesTrace — File Tracking Software for Government Offices">
+<meta property="og:description" content="Where is this file, what's its status, and who did what to it? Voice notes and documents transcribed, summarised and triaged by AI — over a lifecycle you configure and a history nobody can quietly rewrite.">
+<meta property="og:image" content="https://buddhyantra.com/assets/og-filestrace.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FilesTrace — file tracking and status management, by Buddhyantra.">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FilesTrace — File Tracking Software for Government Offices">
+<meta name="twitter:description" content="Where is this file, what's its status, and who did what to it? Voice notes and documents transcribed, summarised and triaged by AI, over a history nobody can quietly rewrite.">
+<meta name="twitter:image" content="https://buddhyantra.com/assets/og-filestrace.png">
+
 <meta name="theme-color" content="#5A51C6">
 <!-- The product's own mark, not the company one — this page is what someone bookmarks as FilesTrace. -->
 <link rel="icon" type="image/svg+xml" href="../assets/filestrace/logo.svg">
@@ -165,6 +189,40 @@ figure{margin:0}
 .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;margin:0 0 14px}
 .k-indigo{color:var(--indigo)} .k-teal{color:var(--teal)}
 .k-marigold{color:#C57F12} .k-rose{color:#C9506A}
+.k-lav{color:#6B62CE}
+
+/* ---------- ai intake diagram ----------
+   A drawing, not a screenshot: the AI step has no single screen of its own, and dressing
+   an illustration up as a captured UI would be a lie about what the app looks like. */
+.aiflow{margin:0;display:grid;gap:0;justify-items:stretch}
+.ai-arrow{display:block;justify-self:center;width:11px;height:11px;margin:14px 0;
+  border-right:2px solid rgba(22,20,46,.26);border-bottom:2px solid rgba(22,20,46,.26);
+  transform:rotate(45deg)}
+.ai-in{display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.ai-chip{display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:12.5px;color:var(--ink);
+  padding:9px 15px;border-radius:999px;background:#FFF;
+  border:1px solid var(--line);box-shadow:0 2px 6px rgba(22,20,46,.05)}
+.ai-chip svg{flex:none}
+.ai-card{background:#FFF;border:1px solid var(--line);border-radius:13px;padding:18px 20px 20px;
+  box-shadow:0 10px 28px -18px rgba(22,20,46,.4)}
+.ai-t{font-family:var(--mono);font-size:11px;letter-spacing:.09em;margin:0 0 11px !important}
+.ai-t.t-in{color:var(--muted)}
+.ai-t.t-out{color:var(--indigo)}
+.aiflow p{font-size:15.5px;line-height:1.6;color:var(--muted);margin:0}
+.ai-ml{font-size:16.5px !important;color:var(--ink) !important;line-height:1.55 !important}
+.ai-gloss{margin-top:6px !important;font-size:14px !important;font-style:italic}
+.ai-sum{border-color:rgba(90,81,198,.34);
+  background:linear-gradient(158deg,rgba(90,81,198,.07),rgba(255,255,255,0) 60%),#FFF}
+.ai-sum p.ai-body{color:var(--ink) !important;font-size:15.5px !important}
+.ai-acts{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.ai-acts li{display:inline-flex;align-items:center;gap:7px;
+  font-family:var(--mono);font-size:12px;color:var(--indigo);
+  padding:7px 13px;border-radius:999px;
+  background:rgba(90,81,198,.09);border:1px solid rgba(90,81,198,.24)}
+.ai-acts li b{font-weight:500;color:var(--ink)}
+.ai-note{display:block;margin-top:14px;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.03em;color:var(--muted);text-align:center}
 
 /* ---------- facts ---------- */
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
@@ -229,6 +287,81 @@ figure{margin:0}
   .reveal{opacity:1;transform:none}
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://buddhyantra.com/products/filestrace.html#software",
+      "name": "FilesTrace",
+      "url": "https://buddhyantra.com/products/filestrace.html",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "File tracking, document management and AI-assisted triage",
+      "operatingSystem": "Web browser, Android, iOS",
+      "description": "FilesTrace is file tracking and status management for government departments and organisations that run on paperwork. Every file is filed under a department, moves through a status lifecycle the office configures itself, can be forwarded to another desk, carries its attachments, and keeps an append-only history of everything that happened to it. Attached voice notes and documents are transcribed in the language they were recorded in, and AI summarises them and proposes the department, ward, status and forwarding desk for a clerk to accept or override.",
+      "image": "https://buddhyantra.com/assets/filestrace/dashboard.jpg",
+      "screenshot": [
+        "https://buddhyantra.com/assets/filestrace/dashboard.jpg",
+        "https://buddhyantra.com/assets/filestrace/files.jpg",
+        "https://buddhyantra.com/assets/filestrace/file-detail.jpg",
+        "https://buddhyantra.com/assets/filestrace/statuses.jpg",
+        "https://buddhyantra.com/assets/filestrace/groups.jpg",
+        "https://buddhyantra.com/assets/filestrace/calendar.jpg",
+        "https://buddhyantra.com/assets/filestrace/rti.jpg"
+      ],
+      "featureList": [
+        "Docket-numbered file register, searchable and filterable by department, status, ward and date",
+        "Voice notes and attached documents transcribed in the language they were recorded in",
+        "AI-generated summary of an attached voice note, PDF or photographed form",
+        "AI-suggested department, ward, status and forwarding desk, accepted or overridden by a clerk and recorded in the history",
+        "Names and subjects stored and searched in the script they were typed in — Malayalam, Hindi or English",
+        "Status lifecycle configured per department, with statuses that can be deactivated but never deleted",
+        "Append-only history of every comment, forward, status change and attachment",
+        "Forwarding between departments and offices",
+        "Group-based access control spanning multiple departments",
+        "Shared calendar for appointments, site visits and reviews",
+        "RTI Act application register tracked to the statutory deadline",
+        "PDF exports that carry the same filters as the screen",
+        "Self-hosted on your own PostgreSQL database",
+        "Mobile-first interface"
+      ],
+      "inLanguage": "en-IN",
+      "isAccessibleForFree": false,
+      "publisher": { "@id": "https://buddhyantra.com/#organization" },
+      "author": { "@id": "https://buddhyantra.com/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://buddhyantra.com/#organization",
+      "name": "Buddhyantra",
+      "url": "https://buddhyantra.com/",
+      "logo": "https://buddhyantra.com/assets/buddhyantra-logo.png",
+      "email": "hello@buddhyantra.com"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://buddhyantra.com/products/filestrace.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Buddhyantra", "item": "https://buddhyantra.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://buddhyantra.com/#products" },
+        { "@type": "ListItem", "position": 3, "name": "FilesTrace" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://buddhyantra.com/products/filestrace.html#webpage",
+      "url": "https://buddhyantra.com/products/filestrace.html",
+      "name": "FilesTrace — File Tracking Software for Government Offices",
+      "description": "FilesTrace is file tracking for government departments and organisations. Voice notes and scanned documents are transcribed, AI writes the summary and suggests the department, status and desk — over a configurable lifecycle and an append-only history.",
+      "breadcrumb": { "@id": "https://buddhyantra.com/products/filestrace.html#breadcrumb" },
+      "mainEntity": { "@id": "https://buddhyantra.com/products/filestrace.html#software" },
+      "inLanguage": "en-IN"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -268,7 +401,7 @@ figure{margin:0}
     </div>
 
     <p class="hero-line">Where is this file, what’s its status, and who did what to it?</p>
-    <p class="hero-lede">FilesTrace is file tracking and status management for organisations that run on paperwork. Every file is filed under a department, moves through a status lifecycle you configure yourself, can be forwarded to another office, carries its attachments, and accumulates an append-only history of everything that happened to it. Ask the question at any hour and the answer is on the screen.</p>
+    <p class="hero-lede">FilesTrace is file tracking and status management for government departments and organisations that run on paperwork. Every file is filed under a department, moves through a status lifecycle you configure yourself, can be forwarded to another office, carries its attachments, and accumulates an append-only history of everything that happened to it. Ask the question at any hour and the answer is on the screen.</p>
 
     <div class="hero-actions">
       <a class="btn btn-lg" href="#talk">Request a walkthrough</a>
@@ -292,7 +425,7 @@ figure{margin:0}
     <h2>A file nobody can find is a decision nobody can make.</h2>
     <p>Most offices already track files. In a register, in a spreadsheet, in the memory of the one clerk who has been there longest. It works until somebody is on leave, until two departments each think the other has it, until a petitioner rings to ask what happened and the honest answer is that nobody knows.</p>
     <div class="rule"></div>
-    <p class="aside">FilesTrace does not ask an office to change how it works. It records what it already does — accurately, in one place, with a history that cannot be quietly rewritten.</p>
+    <p class="aside">FilesTrace does not ask an office to change how it works. It records what it already does — accurately, in one place, with a history that cannot be quietly rewritten. Built and run by <a href="../index.html#what-we-do">Buddhyantra</a>.</p>
   </div>
 </section>
 
@@ -304,6 +437,7 @@ figure{margin:0}
         <p class="kicker k-indigo">the register</p>
         <h3>Every file, one list.</h3>
         <p>Each file gets a docket number the moment it is created — the one human-readable handle everyone in the office can say out loud. From there it is searchable by docket, contact, subject or address, and filterable by department, status, ward, date and who recommended it.</p>
+        <p>Names, addresses and subjects go in as typed — Malayalam, Hindi or English — and stay searchable in the script they were written in, because a register that quietly transliterates is a register you can’t find anything in.</p>
         <p>The same filters drive the PDF export, so a printed list is always the list that was on the screen.</p>
       </div>
       <figure>
@@ -333,6 +467,62 @@ figure{margin:0}
 
     <div class="feat reveal">
       <div class="feat-txt">
+        <p class="kicker k-lav">the AI</p>
+        <h3>A voice note becomes a file that’s ready to act on.</h3>
+        <p>Most of what reaches an office does not arrive as a tidy form. It arrives as a two-minute WhatsApp voice note, a photographed application, a PDF someone forwarded. Attach any of it to a file and FilesTrace transcribes the audio and reads the documents — in the language they were actually recorded and written in, not translated into English first.</p>
+        <p>From that, the AI writes a plain summary of what the person is asking for, and proposes the entries a clerk would otherwise type by hand: which department it belongs to, the ward, the status to move it to, and the desk to forward it to.</p>
+        <p>Every proposal is a suggestion, not a decision. A clerk accepts or overrides each one, and either way the choice lands in the same append-only history as everything else — so a file is never quietly classified by a machine with nobody's name against it.</p>
+      </div>
+      <figure>
+        <div class="aiflow">
+          <div class="ai-in">
+            <span class="ai-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5A51C6" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4"/>
+              </svg>
+              voice note · 2:14
+            </span>
+            <span class="ai-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#EF9F27" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/>
+              </svg>
+              application.pdf
+            </span>
+            <span class="ai-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#2E9E8F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/>
+              </svg>
+              photo of the form
+            </span>
+          </div>
+
+          <span class="ai-arrow" aria-hidden="true"></span>
+
+          <div class="ai-card">
+            <p class="ai-t t-in">transcript · as spoken</p>
+            <p class="ai-ml">വാർഡ് 12-ൽ പൈപ്പ് പൊട്ടി മൂന്ന് ദിവസമായി വെള്ളമില്ല. രണ്ട് തവണ ഓഫീസിൽ വിളിച്ചു.</p>
+            <p class="ai-gloss">“The pipe in ward 12 burst, no water for three days. I rang the office twice.”</p>
+          </div>
+
+          <span class="ai-arrow" aria-hidden="true"></span>
+
+          <div class="ai-card ai-sum">
+            <p class="ai-t t-out">summary &amp; suggested actions</p>
+            <p class="ai-body">Burst water line in Ward 12, no supply for three days. Petitioner has called twice already. Two open files reference the same line.</p>
+            <ul class="ai-acts">
+              <li>Department <b>Water Supply</b></li>
+              <li>Ward <b>12</b></li>
+              <li>Status <b>In Progress</b></li>
+              <li>Forward to <b>Asst. Engineer</b></li>
+            </ul>
+          </div>
+        </div>
+        <figcaption class="ai-note">a clerk accepts, edits or rejects each one — and that lands in the history too</figcaption>
+      </figure>
+    </div>
+
+    <div class="feat flip reveal">
+      <div class="feat-txt">
         <p class="kicker k-marigold">the lifecycle</p>
         <h3>Configured by the office, not by us.</h3>
         <p>Departments are set up in the app, and each one carries its own status lifecycle, in its own order, with its own colours — and its own set of form fields, so a department that never needs a ward doesn’t see one.</p>
@@ -347,7 +537,7 @@ figure{margin:0}
       </figure>
     </div>
 
-    <div class="feat flip reveal">
+    <div class="feat reveal">
       <div class="feat-txt">
         <p class="kicker k-rose">the permissions</p>
         <h3>Access shaped like the office.</h3>
@@ -363,7 +553,7 @@ figure{margin:0}
       </figure>
     </div>
 
-    <div class="feat reveal">
+    <div class="feat flip reveal">
       <div class="feat-txt">
         <p class="kicker k-indigo">the day</p>
         <h3>The diary, in the same place as the work.</h3>
@@ -379,7 +569,7 @@ figure{margin:0}
       </figure>
     </div>
 
-    <div class="feat flip reveal">
+    <div class="feat reveal">
       <div class="feat-txt">
         <p class="kicker k-teal">the register beside the register</p>
         <h3>RTI applications, tracked to the deadline.</h3>

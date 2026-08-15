@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://buddhyantra.com/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://buddhyantra.com/assets/og-home.png</image:loc>
+      <image:title>Buddhyantra — engineered, not assembled</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://buddhyantra.com/products/filestrace.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://buddhyantra.com/assets/filestrace/dashboard.jpg</image:loc>
+      <image:title>The FilesTrace dashboard</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://buddhyantra.com/assets/filestrace/files.jpg</image:loc>
+      <image:title>The FilesTrace file register</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://buddhyantra.com/assets/filestrace/file-detail.jpg</image:loc>
+      <image:title>A single file and its append-only history</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://buddhyantra.com/assets/filestrace/statuses.jpg</image:loc>
+      <image:title>A department's configurable status lifecycle</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://buddhyantra.com/assets/filestrace/groups.jpg</image:loc>
+      <image:title>Group-based access control across departments</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://buddhyantra.com/assets/filestrace/calendar.jpg</image:loc>
+      <image:title>The shared FilesTrace calendar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://buddhyantra.com/assets/filestrace/rti.jpg</image:loc>
+      <image:title>The RTI Act application register</image:title>
+    </image:image>
+  </url>
+
+</urlset>
