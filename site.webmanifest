@@ -1,0 +1,13 @@
+{
+  "name": "Buddhyantra",
+  "short_name": "Buddhyantra",
+  "description": "Web and mobile apps, AI consulting and AI training. Intelligence, engineered.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FFFFFF",
+  "theme_color": "#5A51C6",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,488 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-IN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-<title>Buddhyantra — AI Consulting &amp; Custom Apps in Indian Languages</title>
-<meta name="description" content="Buddhyantra connects organisations with citizens and customers on WhatsApp, voice and paper, in Indian languages — then builds the AI that routes, triages and follows up.">
-<meta name="keywords" content="AI consulting, AI consulting India, IT services, IT consultancy, custom made apps, custom app development, low code solutions, low code development, AI for business, AI for government departments, data engineering, customer data engineering, Indian language software, multilingual citizen services">
+<title>Buddhyantra — Web &amp; Mobile Apps, AI Consulting and AI Training</title>
+<meta name="description" content="Web and mobile app development, AI consulting and AI training from Kozhikode, Kerala. Makers of Crosdesk, AI-enabled project management with MCP, and FilesTrace.">
+<meta name="keywords" content="web application development, mobile app development, IT services Kerala, IT services Kozhikode, AI consulting India, AI training, AI training for teams, MCP, citizen connect platform, grievance redressal software, Crosdesk, FilesTrace, project management, custom software">
 <link rel="canonical" href="https://buddhyantra.com/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="author" content="Buddhyantra">
+<meta name="author" content="Buddhyantra LLP">
 
 <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Buddhyantra">
 <meta property="og:url" content="https://buddhyantra.com/">
-<meta property="og:title" content="Buddhyantra — AI Consulting &amp; Custom Apps in Indian Languages">
-<meta property="og:description" content="Take WhatsApp voice notes, phone calls and scanned paper in any Indian language into one queue — then let AI route, triage and follow up. Intelligence, engineered.">
+<meta property="og:title" content="Buddhyantra — Web &amp; Mobile Apps, AI Consulting and AI Training">
+<meta property="og:description" content="Web and mobile applications, citizen connect platforms, AI consulting and AI training. Makers of Crosdesk and FilesTrace. Intelligence, engineered.">
 <meta property="og:image" content="https://buddhyantra.com/assets/og-home.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Buddhyantra — intelligence, engineered. AI consulting and custom software in Indian languages.">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Buddhyantra — intelligence, engineered.">
 <meta property="og:locale" content="en_IN">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Buddhyantra — AI Consulting &amp; Custom Apps in Indian Languages">
-<meta name="twitter:description" content="Take WhatsApp voice notes, phone calls and scanned paper in any Indian language into one queue — then let AI route, triage and follow up.">
+<meta name="twitter:title" content="Buddhyantra — Web &amp; Mobile Apps, AI Consulting and AI Training">
+<meta name="twitter:description" content="Web and mobile applications, citizen connect platforms, AI consulting and AI training. Makers of Crosdesk and FilesTrace.">
 <meta name="twitter:image" content="https://buddhyantra.com/assets/og-home.png">
 <meta name="twitter:image:alt" content="Buddhyantra — intelligence, engineered.">
 
 <meta name="theme-color" content="#5A51C6">
-<!-- Real files, not a data: URI — Google has to crawl the favicon to show it in a search
-     result, and it cannot read a data URI. /favicon.ico is the fallback it looks for. -->
+<meta name="geo.region" content="IN-KL">
+<meta name="geo.placename" content="Kozhikode">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --paper:#F3F2F8;
-  --paper-2:#FBFAFF;
-  --ink:#16142E;
-  --indigo:#5A51C6;
-  --indigo-deep:#3B3490;
-  --lav:#7F77DD;
-  --marigold:#EF9F27;
-  --teal:#2E9E8F;
-  --rose:#E4708A;
-  --cape:#D8433F;
-  --cape-2:#B32F2F;
-  --skin:#E8B08A;
-  --skin-2:#E0A472;
-  --skin-sh:#C6864F;
-  --outline:#1A1226;
-  --muted:#65627F;
-  --line:rgba(22,20,46,.12);
-  --display:"Bricolage Grotesque",system-ui,sans-serif;
-  --body:"Instrument Sans",system-ui,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,monospace;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--paper);color:var(--ink);
-  font-family:var(--body);font-size:17px;line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.wrap-wide{max-width:1340px}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--indigo);outline-offset:3px;border-radius:4px}
-
-/* ---------- header ---------- */
-.site-head{
-  position:fixed;top:0;left:0;right:0;z-index:40;
-  backdrop-filter:blur(12px);background:rgba(246,245,251,.8);
-  border-bottom:1px solid transparent;transition:border-color .3s;
-}
-.site-head.stuck{border-bottom-color:var(--line)}
-.head-in{display:flex;align-items:center;justify-content:space-between;gap:20px;height:88px}
-.brand{display:flex;align-items:center;gap:13px;text-decoration:none;min-width:0}
-.brand-txt{display:flex;flex-direction:column;gap:2px;min-width:0}
-.brand-name{font-family:var(--display);font-size:26px;font-weight:600;letter-spacing:-.02em;line-height:1}
-.brand-name em{font-style:normal;color:var(--indigo)}
-.brand-tag{font-family:var(--body);font-size:12.5px;color:var(--muted);letter-spacing:.01em;line-height:1.3}
-.head-nav{display:flex;align-items:center;gap:22px}
-.head-link{
-  font-family:var(--body);font-size:15px;font-weight:500;text-decoration:none;
-  color:var(--ink);padding-bottom:3px;border-bottom:1.5px solid transparent;
-  transition:color .2s,border-color .2s;white-space:nowrap;
-}
-.head-link:hover{color:var(--indigo);border-bottom-color:var(--indigo)}
-.btn{
-  display:inline-block;font-family:var(--body);font-size:15px;font-weight:500;
-  padding:11px 22px;border-radius:999px;text-decoration:none;white-space:nowrap;
-  background:var(--ink);color:var(--paper);border:1px solid var(--ink);
-  transition:background .2s,color .2s,transform .2s;
-}
-.btn:hover{background:var(--indigo);border-color:var(--indigo);transform:translateY(-1px)}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn-ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.btn-lg{font-size:17px;padding:15px 30px}
-
-/* ---------- scroll stage ---------- */
-.stage-wrap{height:400vh;position:relative}
-.stage{
-  position:sticky;top:0;height:100vh;min-height:620px;
-  display:flex;align-items:center;overflow:hidden;
-  background:
-    radial-gradient(52% 50% at 8% 6%, rgba(90,81,198,.24), transparent 68%),
-    radial-gradient(44% 42% at 96% 12%, rgba(46,158,143,.22), transparent 70%),
-    radial-gradient(56% 54% at 82% 96%, rgba(239,159,39,.26), transparent 70%),
-    radial-gradient(46% 48% at 22% 98%, rgba(228,112,138,.18), transparent 70%),
-    linear-gradient(168deg, #F7F5FC 0%, #EFEDF8 55%, #F4F0F7 100%);
-}
-.stage-bg{position:absolute;inset:0;pointer-events:none;z-index:0}
-.fb{position:absolute;display:block;border-radius:16px;opacity:.12}
-.fb1{--r:-12deg;width:190px;height:126px;background:var(--indigo);left:3%;top:14%;
-  transform:rotate(var(--r));animation:floatA 15s ease-in-out infinite}
-.fb2{--r:9deg;width:126px;height:84px;background:var(--marigold);right:5%;top:9%;
-  transform:rotate(var(--r));animation:floatB 18s ease-in-out infinite}
-.fb3{--r:-6deg;width:230px;height:148px;background:var(--teal);right:11%;bottom:5%;
-  transform:rotate(var(--r));animation:floatA 21s ease-in-out infinite reverse}
-.fb4{--r:15deg;width:148px;height:100px;background:var(--lav);left:13%;bottom:8%;
-  transform:rotate(var(--r));animation:floatB 13s ease-in-out infinite reverse}
-.fb5{--r:-20deg;width:96px;height:66px;background:var(--rose);left:44%;top:5%;
-  transform:rotate(var(--r));animation:floatA 17s ease-in-out infinite}
-@keyframes floatA{0%,100%{transform:rotate(var(--r)) translateY(0)}
-  50%{transform:rotate(var(--r)) translateY(-28px)}}
-@keyframes floatB{0%,100%{transform:rotate(var(--r)) translate(0,0)}
-  50%{transform:rotate(var(--r)) translate(-18px,20px)}}
-
-.stage-grid{
-  position:relative;z-index:1;
-  display:grid;grid-template-columns:.84fr 1.16fr;gap:34px;align-items:center;width:100%;
-}
-.stage-grid > div{min-width:0}
-.sentence-wrap{position:relative;font-family:var(--display);
-  font-size:clamp(38px,6vw,86px);line-height:1}
-.sentence{margin:0;font-size:inherit;font-weight:500;line-height:1;letter-spacing:-.038em}
-.ph-layer{position:absolute;inset:0;font-size:inherit;pointer-events:none}
-.ph{position:absolute;left:.04em;height:1em;display:flex;align-items:center;gap:.11em;
-  transition:opacity .5s ease,transform .6s cubic-bezier(.2,.9,.3,1)}
-.ph-2{top:1em}
-.ph-3{top:2em}
-.ph i{position:relative;display:block;width:.66em;height:.3em;border-radius:.07em;opacity:.32}
-.ph i::before{content:"";position:absolute;left:.13em;top:-.075em;
-  width:.4em;height:.075em;border-radius:.04em;background:inherit}
-.ph-2 i:nth-child(1){background:var(--indigo)}
-.ph-2 i:nth-child(2){background:var(--marigold)}
-.ph-2 i:nth-child(3){background:var(--teal)}
-.ph-3 i:nth-child(1){background:var(--rose)}
-.ph-3 i:nth-child(2){background:var(--lav)}
-.stage[data-beat="1"] .ph-2,
-.stage[data-beat="2"] .ph-2,
-.stage[data-beat="2"] .ph-3{opacity:0;transform:translateX(-.18em)}
-.line{display:block;opacity:0;transform:translateY(30px) rotate(-2.6deg);
-  transform-origin:left bottom;
-  transition:opacity .5s ease,transform .85s cubic-bezier(.18,1.15,.3,1)}
-.line.on{opacity:1;transform:none}
-.line-3{color:var(--indigo)}
-.dot{color:var(--marigold)}
-
-.beat-note{margin:32px 0 0;max-width:36ch;color:var(--muted);font-size:16.5px;min-height:3.3em}
-.beat-note span{display:none}
-.beat-note span.on{display:inline;animation:noteIn .5s ease both}
-@keyframes noteIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-
-.beats{position:absolute;right:26px;bottom:86px;z-index:2;display:flex;gap:8px}
-.beats i{display:block;width:26px;height:12px;border-radius:3px;
-  border:1.5px solid rgba(22,20,46,.2);background:transparent;
-  transition:background .45s,border-color .45s,transform .45s}
-.beats i.on{background:var(--indigo);border-color:var(--indigo);transform:translateY(-3px)}
-
-/* ---------- scene ---------- */
-.scene{width:100%;height:auto;max-height:86vh;display:block}
-.cam{transform-box:view-box;transform-origin:300px 300px;
-  transform:scale(calc(1 + var(--p,0) * .05))}
-
-.blk{transform-box:view-box;transform-origin:0 0;
-  transition:transform 900ms cubic-bezier(.22,.85,.28,1)}
-.stage[data-beat="2"] .blk{transition-duration:1000ms;
-  transition-timing-function:cubic-bezier(.16,1.3,.3,1)}
-.bi{transform-box:fill-box;transform-origin:50% 50%;
-  animation:drop .75s cubic-bezier(.2,1.25,.35,1) both}
-@keyframes drop{from{transform:translateY(-52px);opacity:0}to{transform:none;opacity:1}}
-#b1 .bi{animation-delay:.10s} #b2 .bi{animation-delay:.22s} #b3 .bi{animation-delay:.34s}
-#b4 .bi{animation-delay:.46s} #b5 .bi{animation-delay:.58s}
-
-#tower{transform-box:view-box;transform-origin:315px 380px}
-.stage[data-beat="1"] #tower{animation:teeter 1.15s ease-in-out infinite}
-@keyframes teeter{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(2deg)}}
-.stage[data-beat="2"] #tower{animation:settle .55s cubic-bezier(.25,.9,.3,1) 1s both}
-@keyframes settle{0%,100%{transform:none}40%{transform:scaleY(.955) scaleX(1.02)}}
-
-.kid-wrap{transform-box:view-box;transform-origin:145px 380px;
-  animation:bob 3.8s ease-in-out infinite}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3.5px)}}
-.stage[data-beat="1"] .kid-wrap{animation:fret .55s ease-in-out infinite}
-@keyframes fret{0%,100%{transform:translate(0,0)}25%{transform:translate(-2px,1px)}75%{transform:translate(2px,-1px)}}
-.stage[data-beat="2"] .kid-wrap{animation:hop 4s cubic-bezier(.25,.9,.3,1) .95s infinite}
-@keyframes hop{
-  0%{transform:translateY(0)} 6%{transform:translateY(-13px)}
-  13%{transform:translateY(0)} 19%{transform:translateY(-6px)}
-  25%,100%{transform:translateY(0)}
-}
-
-.fx{opacity:0;transition:opacity .35s ease}
-.sweat{transform-box:fill-box;transform-origin:50% 50%}
-.stage[data-beat="1"] .sweat{animation:sweat 1.8s ease-in infinite}
-@keyframes sweat{0%{transform:translateY(0);opacity:0}18%{opacity:1}
-  72%{opacity:1}100%{transform:translateY(17px);opacity:0}}
-
-.wob{opacity:0}
-.stage[data-beat="1"] .wob{animation:wob 1.15s ease-in-out infinite}
-@keyframes wob{0%,100%{opacity:.15}50%{opacity:.75}}
-
-/* hero kid */
-.hero{opacity:0;transform-box:view-box;transform-origin:0 0;
-  transform:translate(160px,-34px) rotate(7deg);
-  transition:opacity .5s ease,transform 1.05s cubic-bezier(.2,1.08,.3,1)}
-.stage[data-beat="2"] .hero{opacity:1;transform:none}
-.hero-in{transform-box:view-box;transform-origin:0 0}
-.stage[data-beat="2"] .hero-in{animation:heroBob 3s ease-in-out 1.15s infinite}
-@keyframes heroBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-.cape{transform-box:view-box;transform-origin:519px 266px}
-.stage[data-beat="2"] .cape{animation:flutter 1.7s ease-in-out infinite}
-@keyframes flutter{0%,100%{transform:rotate(-2.5deg) skewY(1deg)}50%{transform:rotate(3.5deg) skewY(-1.5deg)}}
-.bolt{transform-box:fill-box;transform-origin:50% 100%}
-.stage[data-beat="2"] .bolt{animation:zap 2.6s ease-in-out 1.4s infinite}
-@keyframes zap{0%,80%,100%{transform:scale(1)}88%{transform:scale(1.16) rotate(-6deg)}}
-
-.spark{transform-box:fill-box;transform-origin:50% 50%;opacity:0}
-.stage[data-beat="2"] .spark{animation:pop 1s ease-out both}
-@keyframes pop{0%{transform:scale(0) rotate(0);opacity:0}
-  35%{opacity:1}100%{transform:scale(1.6) rotate(70deg);opacity:0}}
-.s1{animation-delay:1.05s} .s2{animation-delay:1.18s} .s3{animation-delay:1.3s}
-.s4{animation-delay:1.42s} .s5{animation-delay:1.54s}
-
-.stage[data-beat="0"] .f-calm,
-.stage[data-beat="1"] .f-tense,
-.stage[data-beat="2"] .f-happy{opacity:1}
-.stage[data-beat="0"] .arm-reach,
-.stage[data-beat="1"] .arm-reach,
-.stage[data-beat="2"] .arm-up{opacity:1}
-
-.stage[data-beat="0"] #b1{transform:translate(315px,360px) rotate(0deg)}
-.stage[data-beat="0"] #b2{transform:translate(315px,318px) rotate(0deg)}
-.stage[data-beat="0"] #b3{transform:translate(315px,276px) rotate(0deg)}
-.stage[data-beat="0"] #b4{transform:translate(402px,360px) rotate(0deg)}
-.stage[data-beat="0"] #b5{transform:translate(462px,360px) rotate(0deg)}
-
-.stage[data-beat="1"] #b1{transform:translate(315px,360px) rotate(-4deg)}
-.stage[data-beat="1"] #b2{transform:translate(307px,316px) rotate(-11deg)}
-.stage[data-beat="1"] #b3{transform:translate(291px,271px) rotate(-20deg)}
-.stage[data-beat="1"] #b4{transform:translate(267px,227px) rotate(-32deg)}
-.stage[data-beat="1"] #b5{transform:translate(234px,187px) rotate(-47deg)}
-
-.stage[data-beat="2"] #b1{transform:translate(300px,360px) rotate(0deg)}
-.stage[data-beat="2"] #b4{transform:translate(358px,360px) rotate(0deg);transition-delay:.06s}
-.stage[data-beat="2"] #b2{transform:translate(416px,360px) rotate(0deg);transition-delay:.12s}
-.stage[data-beat="2"] #b3{transform:translate(329px,318px) rotate(0deg);transition-delay:.3s}
-.stage[data-beat="2"] #b5{transform:translate(387px,318px) rotate(0deg);transition-delay:.44s}
-
-/* ---------- bands ---------- */
-.band{padding:clamp(84px,11vw,150px) 0;position:relative}
-.band-paper{
-  background:
-    radial-gradient(40% 46% at 96% 4%, rgba(46,158,143,.13), transparent 66%),
-    radial-gradient(38% 44% at 2% 96%, rgba(90,81,198,.12), transparent 66%),
-    var(--paper-2);
-}
-.label{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;color:var(--indigo);margin:0 0 18px}
-h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
-  font-size:clamp(30px,4.2vw,50px);line-height:1.08;margin:0 0 20px}
-.lede{font-size:clamp(18px,2vw,21px);line-height:1.6;color:var(--muted);max-width:56ch;margin:0}
-
-.reveal{opacity:0;transform:translateY(22px);
-  transition:opacity .7s ease,transform .8s cubic-bezier(.2,.9,.3,1)}
-.reveal.in{opacity:1;transform:none}
-
-/* Four offers, so a 2×2 grid rather than a row — a fourth column would squeeze the
-   copy past the point where the paragraphs read. */
-.offers{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
-  background:var(--line);border:1px solid var(--line);border-radius:16px;
-  overflow:hidden;margin-top:56px}
-.offer{padding:34px 30px 38px}
-.offer-a{background:linear-gradient(165deg,rgba(90,81,198,.11),rgba(255,255,255,0) 58%),#FFF}
-.offer-b{background:linear-gradient(165deg,rgba(46,158,143,.13),rgba(255,255,255,0) 58%),#FFF}
-.offer-c{background:linear-gradient(165deg,rgba(239,159,39,.15),rgba(255,255,255,0) 58%),#FFF}
-.offer-d{background:linear-gradient(165deg,rgba(228,112,138,.13),rgba(255,255,255,0) 58%),#FFF}
-.offer .who{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);margin:0 0 20px}
-.offer h3{font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:-.02em;margin:0 0 12px}
-.offer p{margin:0;font-size:16px;color:var(--muted);line-height:1.6}
-.glyph{display:block;margin:0 0 22px}
-.glyph rect{transition:transform .5s cubic-bezier(.2,1.2,.3,1);transform-box:fill-box;transform-origin:50% 100%}
-.offer:hover .glyph rect:nth-child(3){transform:translateY(-5px)}
-
-/* ---------- products ---------- */
-.prod{
-  display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(30px,4vw,56px);
-  align-items:center;margin-top:56px;padding:clamp(30px,3.4vw,44px);
-  border:1px solid var(--line);border-radius:20px;
-  background:linear-gradient(158deg,rgba(90,81,198,.1),rgba(255,255,255,0) 62%),#FFF;
-}
-.prod > *{min-width:0}
-.prod-head{display:flex;align-items:center;gap:14px;margin:0 0 16px}
-/* The FilesTrace mark: the product's own tile colour and geometry, not the Buddhyantra indigo —
-   it is the mark the app itself ships (apps/web/src/components/brand-mark.tsx). */
-.prod-mark{
-  width:46px;height:46px;border-radius:27%;flex:none;
-  background:#2563EB;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 8px 20px rgba(37,99,235,.3);
-}
-.prod-mark svg{width:91%;height:auto;display:block}
-.prod-name{font-family:var(--display);font-weight:500;font-size:clamp(27px,3.2vw,36px);
-  letter-spacing:-.028em;line-height:1;margin:0}
-.prod-name em{font-style:normal;color:var(--indigo)}
-.prod-line{font-family:var(--display);font-weight:400;font-size:clamp(18px,2vw,22px);
-  letter-spacing:-.015em;line-height:1.32;margin:0 0 14px;max-width:26ch}
-.prod p.prod-body{margin:0 0 22px;font-size:16.5px;color:var(--muted);line-height:1.62}
-.prod-pts{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:9px}
-.prod-pts li{position:relative;padding-left:20px;font-size:15.5px;color:var(--muted);line-height:1.5}
-.prod-pts li::before{
-  content:"";position:absolute;left:0;top:.56em;width:9px;height:6px;border-radius:2px;
-  background:var(--indigo);
-}
-.prod-pts li:nth-child(2)::before{background:var(--marigold)}
-.prod-pts li:nth-child(3)::before{background:var(--teal)}
-.prod-pts li:nth-child(4)::before{background:var(--rose)}
-.prod-pts li:nth-child(5)::before{background:var(--lav)}
-.prod-more{
-  display:inline-flex;align-items:center;gap:9px;text-decoration:none;
-  font-family:var(--body);font-size:15px;font-weight:500;
-  padding:11px 22px;border-radius:999px;
-  background:var(--ink);color:var(--paper);border:1px solid var(--ink);
-  transition:background .2s,border-color .2s,transform .2s;
-}
-.prod-more:hover{background:var(--indigo);border-color:var(--indigo);transform:translateY(-1px)}
-.prod-more svg{transition:transform .25s}
-.prod-more:hover svg{transform:translateX(3px)}
-.prod-shot{
-  border-radius:12px;overflow:hidden;background:#FFF;border:1px solid var(--line);
-  box-shadow:0 20px 46px -20px rgba(22,20,46,.4), 0 2px 8px rgba(22,20,46,.05);
-}
-.prod-shot .bar{display:flex;align-items:center;gap:6px;padding:9px 12px;
-  background:#F1F0F6;border-bottom:1px solid var(--line)}
-.prod-shot .bar i{width:8.5px;height:8.5px;border-radius:50%;display:block;background:#D6D4E2}
-.prod-shot .bar i:nth-child(1){background:#E4708A}
-.prod-shot .bar i:nth-child(2){background:#EF9F27}
-.prod-shot .bar i:nth-child(3){background:#2E9E8F}
-.prod-shot img{display:block;width:100%;height:auto}
-
-/* ---------- intake flow ---------- */
-/* Three steps on the dark band. The `.claim p` rule below is broader than these, so every
-   text rule here is scoped through `.claim` to win on specificity rather than order. */
-.flow{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);
-  gap:18px;margin:52px 0 0;padding:0}
-.step{position:relative;padding:28px 26px 30px;border-radius:14px;
-  background:rgba(243,242,248,.06);border:1px solid rgba(243,242,248,.15)}
-.step:not(:last-child)::after{
-  content:"";position:absolute;right:-13px;top:50%;width:9px;height:9px;
-  border-top:2px solid rgba(243,242,248,.34);border-right:2px solid rgba(243,242,248,.34);
-  transform:translateY(-50%) rotate(45deg);
-}
-.step-n{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.1em;
-  color:var(--marigold);margin:0 0 16px}
-.claim .step h3{font-family:var(--display);font-weight:500;font-size:20px;
-  letter-spacing:-.02em;line-height:1.26;margin:0 0 12px;color:var(--paper)}
-.claim .step p{margin:0;font-size:15.5px;line-height:1.62;
-  color:rgba(243,242,248,.74);max-width:none}
-.chans{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin:20px 0 0;padding:0}
-.chans li{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;
-  padding:5px 11px;border-radius:999px;
-  border:1px solid rgba(243,242,248,.22);color:rgba(243,242,248,.76)}
-
-/* ---------- languages strip ---------- */
-.tongues{display:flex;flex-wrap:wrap;gap:10px;margin:38px 0 0;padding:0;list-style:none}
-.tongues li{
-  font-family:var(--mono);font-size:13px;letter-spacing:.02em;
-  padding:7px 15px;border-radius:999px;
-  border:1px solid rgba(243,242,248,.22);color:rgba(243,242,248,.82);
-}
-.tongues li span{color:rgba(243,242,248,.45);margin-left:7px}
-
-/* ---------- faq ---------- */
-.faq{margin-top:52px;border-top:1px solid var(--line)}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{
-  list-style:none;cursor:pointer;padding:22px 44px 22px 0;position:relative;
-  font-family:var(--display);font-weight:500;font-size:clamp(18px,2.1vw,22px);
-  letter-spacing:-.018em;line-height:1.32;
-}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{
-  content:"";position:absolute;right:8px;top:50%;width:13px;height:13px;
-  border-right:2px solid var(--indigo);border-bottom:2px solid var(--indigo);
-  transform:translateY(-70%) rotate(45deg);transition:transform .3s;
-}
-.faq details[open] summary::after{transform:translateY(-20%) rotate(-135deg)}
-.faq summary:hover{color:var(--indigo)}
-.faq .answer{margin:0 0 26px;padding-right:44px;max-width:74ch;
-  font-size:16.5px;line-height:1.66;color:var(--muted)}
-
-.claim{
-  background:
-    radial-gradient(46% 52% at 88% 8%, rgba(90,81,198,.4), transparent 68%),
-    radial-gradient(42% 50% at 4% 92%, rgba(239,159,39,.22), transparent 68%),
-    var(--ink);
-  color:var(--paper);
-}
-.claim .label{color:var(--marigold)}
-.claim h2{max-width:20ch}
-.claim p{color:rgba(243,242,248,.76);max-width:54ch;font-size:clamp(17px,1.8vw,19.5px)}
-.claim .rule{height:1px;background:rgba(243,242,248,.2);margin:52px 0 40px}
-.claim .aside{font-family:var(--mono);font-size:13.5px;color:rgba(243,242,248,.62);letter-spacing:.03em;margin:0}
-
-.cta{
-  text-align:center;
-  background:
-    radial-gradient(38% 60% at 50% 0%, rgba(127,119,221,.18), transparent 70%),
-    radial-gradient(30% 50% at 12% 100%, rgba(239,159,39,.16), transparent 70%),
-    radial-gradient(30% 50% at 88% 100%, rgba(46,158,143,.14), transparent 70%),
-    var(--paper);
-}
-.cta h2{max-width:16ch;margin-inline:auto}
-.cta p{margin:0 auto 36px;max-width:46ch;color:var(--muted)}
-.cta-actions{display:flex;flex-direction:column;align-items:center;gap:16px}
-.cta .mail-hint{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;
-  color:var(--muted);margin:8px 0 0}
-.mail-link{font-family:var(--display);font-size:clamp(21px,2.7vw,32px);font-weight:500;
-  letter-spacing:-.02em;color:var(--indigo);text-decoration:none;padding-bottom:4px;
-  border-bottom:2px solid rgba(90,81,198,.32);transition:color .2s,border-color .2s}
-.mail-link:hover{color:var(--indigo-deep);border-bottom-color:var(--indigo-deep)}
-
-.site-foot{border-top:1px solid var(--line);padding:38px 0 44px;background:var(--paper)}
-.foot-in{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
-.foot-in p{margin:0;font-family:var(--mono);font-size:13px;color:var(--muted)}
-.foot-in a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
-.foot-in a:hover{color:var(--ink)}
-
-@media (max-width:900px){
-  .head-in{height:78px}
-  .brand-tag{display:none}
-  .brand-name{font-size:22px}
-  .stage-wrap{height:330vh}
-  .stage-grid{grid-template-columns:1fr;gap:10px}
-  .scene{order:-1;max-height:44vh}
-  .beats{bottom:26px;right:20px}
-  .beat-note{min-height:4.6em;margin-top:20px}
-  .fb1,.fb3{display:none}
-  .offers{grid-template-columns:1fr;margin-top:40px}
-  .prod{grid-template-columns:1fr;margin-top:40px}
-  .flow{grid-template-columns:1fr;margin-top:38px}
-  .step:not(:last-child)::after{display:none}
-}
-/* The header is the one row that can't reflow — the button is `nowrap` and the company name
-   shouldn't truncate — so below 600px both sides step down instead of colliding. */
-@media (max-width:600px){
-  .site-head .wrap{padding:0 16px}
-  .head-in{gap:12px}
-  .head-nav{gap:14px}
-  .head-link{display:none}
-  .brand{gap:10px}
-  .brand-name{font-size:20px}
-  .site-head .btn{font-size:13px;padding:9px 15px}
-}
-@media (max-width:400px){
-  .brand{gap:8px}
-  .brand svg{width:22px;height:35px}
-  .brand-name{font-size:18px}
-  .site-head .btn{font-size:12px;padding:8px 12px}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important}
-  .line,.reveal{opacity:1;transform:none}
-  .cam{transform:none}
-}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
 
 <script type="application/ld+json">
 {
@@ -492,7 +52,8 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
       "@type": "Organization",
       "@id": "https://buddhyantra.com/#organization",
       "name": "Buddhyantra",
-      "alternateName": ["Buddhyantra Technologies", "बुद्धियन्त्र"],
+      "legalName": "Buddhyantra LLP",
+      "alternateName": ["बुद्धियन्त्र"],
       "url": "https://buddhyantra.com/",
       "logo": {
         "@type": "ImageObject",
@@ -503,121 +64,152 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
       "image": "https://buddhyantra.com/assets/og-home.png",
       "email": "hello@buddhyantra.com",
       "slogan": "Intelligence, engineered.",
-      "description": "Buddhyantra builds the connection between organisations and the people they serve — citizens with government departments, customers with businesses — in the Indian languages those people actually speak, and the AI that manages what comes back.",
-      "knowsAbout": [
-        "AI consulting",
-        "IT services",
-        "IT consultancy",
-        "Custom application development",
-        "Low-code solutions",
-        "Data engineering",
-        "Indian language natural language processing",
-        "Software development lifecycle consulting"
-      ],
-      "knowsLanguage": [
-        { "@type": "Language", "name": "English", "alternateName": "en" },
-        { "@type": "Language", "name": "Hindi", "alternateName": "hi" },
-        { "@type": "Language", "name": "Malayalam", "alternateName": "ml" },
-        { "@type": "Language", "name": "Tamil", "alternateName": "ta" },
-        { "@type": "Language", "name": "Telugu", "alternateName": "te" },
-        { "@type": "Language", "name": "Kannada", "alternateName": "kn" },
-        { "@type": "Language", "name": "Marathi", "alternateName": "mr" },
-        { "@type": "Language", "name": "Bengali", "alternateName": "bn" }
-      ],
+      "brand": [{ "@type": "Brand", "name": "Crosdesk", "url": "https://crosdesk.com/" }, { "@type": "Brand", "name": "FilesTrace" }],
+      "description": "Buddhyantra builds web applications and mobile apps, citizen connect platforms and the AI that runs behind them, trains teams to use AI well, and makes the Crosdesk and FilesTrace products.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Padingare Purkkal Paramba, 36/1621 A, Vengeri, Karaparamba, Nadakkavu",
+        "addressLocality": "Kozhikode",
+        "addressRegion": "Kerala",
+        "postalCode": "673010",
+        "addressCountry": "IN"
+      },
+      "employee": { "@type": "Person", "name": "Anusree Raj", "jobTitle": "Director" },
       "areaServed": { "@type": "Country", "name": "India" },
-      "address": { "@type": "PostalAddress", "addressCountry": "IN" },
+      "knowsAbout": [
+        "Web application development",
+        "Mobile app development",
+        "AI consulting",
+        "AI training",
+        "Model Context Protocol",
+        "Citizen connect platforms",
+        "Data engineering"
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "sales",
         "email": "hello@buddhyantra.com",
         "areaServed": "IN",
         "availableLanguage": ["English", "Malayalam", "Hindi"]
-      }
+      },
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web application development" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile app development for Android and iOS" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI consulting" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI training for teams" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Citizen connect platforms" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data and analytics" } }
+      ]
     },
     {
-      "@type": "ProfessionalService",
-      "@id": "https://buddhyantra.com/#service",
-      "name": "Buddhyantra — AI consulting and custom software",
-      "parentOrganization": { "@id": "https://buddhyantra.com/#organization" },
-      "url": "https://buddhyantra.com/",
-      "areaServed": { "@type": "Country", "name": "India" },
-      "serviceType": ["AI consulting", "IT services", "Custom application development", "Data engineering"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "What Buddhyantra does",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Custom made apps in Indian languages",
-              "description": "Web and mobile applications that put a citizen or a customer in direct contact with the organisation serving them, built to work in the Indian languages those people actually speak."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Multilingual, multi-channel intake",
-              "description": "WhatsApp, voice notes, phone calls, SMS, email, web forms and scanned paper, taken in whatever Indian language the person used — speech transcribed in that language, documents read into fields, and the reply sent back on the same channel in the same language."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI for your business or organisation",
-              "description": "Routing, triage, summarisation and follow-up over the messages, applications and complaints your channels generate — AI applied where it earns its place."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Data engineering with customer data",
-              "description": "Pipelines, warehousing and modelling over the operational and customer data you already hold, turned into forecasts, patterns and decisions."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "IT consultancy and engineer training",
-              "description": "SDLC review, repository restructuring, low-code tool selection, and AI training for your own engineers."
-            }
-          }
-        ]
-      }
+      "@type": "SoftwareApplication",
+      "name": "Crosdesk",
+      "url": "https://crosdesk.com/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "AI-enabled project management for departments that deliver together, with an MCP server so Claude Code, Cursor and other agents can work in it.",
+      "publisher": { "@id": "https://buddhyantra.com/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "FilesTrace",
+      "url": "https://buddhyantra.com/products/filestrace.html",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "File tracking and RTI register for government departments, with AI summaries and suggested routing.",
+      "publisher": { "@id": "https://buddhyantra.com/#organization" }
     },
     {
       "@type": "WebSite",
       "@id": "https://buddhyantra.com/#website",
       "url": "https://buddhyantra.com/",
       "name": "Buddhyantra",
-      "publisher": { "@id": "https://buddhyantra.com/#organization" },
-      "inLanguage": "en-IN"
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://buddhyantra.com/#organization"
+      }
     },
     {
       "@type": "WebPage",
       "@id": "https://buddhyantra.com/#webpage",
       "url": "https://buddhyantra.com/",
-      "name": "Buddhyantra — AI Consulting & Custom Apps in Indian Languages",
-      "description": "Buddhyantra connects organisations with citizens and customers on WhatsApp, voice and paper, in Indian languages — then builds the AI that routes, triages and follows up.",
-      "isPartOf": { "@id": "https://buddhyantra.com/#website" },
-      "about": { "@id": "https://buddhyantra.com/#organization" },
+      "name": "Buddhyantra — Web & Mobile Apps, AI Consulting and AI Training",
+      "description": "Web and mobile app development, AI consulting and AI training from Kozhikode, Kerala. Makers of Crosdesk, AI-enabled project management with MCP, and FilesTrace.",
+      "isPartOf": {
+        "@id": "https://buddhyantra.com/#website"
+      },
+      "about": {
+        "@id": "https://buddhyantra.com/#organization"
+      },
+      "primaryImageOfPage": "https://buddhyantra.com/assets/og-home.png",
       "inLanguage": "en-IN"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://buddhyantra.com/#localbusiness",
+      "name": "Buddhyantra LLP",
+      "url": "https://buddhyantra.com/",
+      "image": "https://buddhyantra.com/assets/og-home.png",
+      "logo": "https://buddhyantra.com/assets/buddhyantra-logo.png",
+      "email": "hello@buddhyantra.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Padingare Purkkal Paramba, 36/1621 A, Vengeri, Karaparamba, Nadakkavu",
+        "addressLocality": "Kozhikode",
+        "addressRegion": "Kerala",
+        "postalCode": "673010",
+        "addressCountry": "IN"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "parentOrganization": {
+        "@id": "https://buddhyantra.com/#organization"
+      },
+      "serviceType": [
+        "Web application development",
+        "Mobile app development",
+        "AI consulting",
+        "AI training",
+        "Citizen connect platforms",
+        "Data and analytics"
+      ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://buddhyantra.com/#faq",
-      "isPartOf": { "@id": "https://buddhyantra.com/#webpage" },
       "mainEntity": [
         {
           "@type": "Question",
           "name": "What does Buddhyantra actually do?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Two things that belong together. We build the channel an organisation meets its people through — a citizen portal, a grievance app, a customer-facing service, in the languages those people speak. Then we build the AI that manages what comes back through it: routing, triage, follow-up, and the reporting that falls out of the data it generates."
+            "text": "We build web applications and mobile apps, and that is where most engagements start. Around them we build citizen connect platforms, add AI that handles routing, triage, follow-up and reporting, and train your team to use AI well. We also make two products of our own, Crosdesk and FilesTrace."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Crosdesk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Crosdesk is our AI-enabled project management product for organisations where several departments deliver the same project. It has an MCP server, so Claude, Cursor or any MCP client can read and update work as you, with exactly your access. You can find it at crosdesk.com."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does your AI training cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on who is in the room. For all staff: writing good prompts and checking what comes back. For engineers: AI-assisted development, agents, tools and MCP. For leaders: where AI is worth the risk, and how to handle public and personal data. Sessions are hands-on and use your own work as the material."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you build mobile apps for both Android and iOS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We build for both stores, plus progressive web apps where an install is more than people need. Where the network is unreliable, we design the app to keep working offline and sync later."
           }
         },
         {
@@ -625,47 +217,15 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
           "name": "Do you work with government departments?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, and it is a large part of what we do. Public offices carry the hardest version of the problem: statutory deadlines, an audit trail that has to hold up, and a public that does not share one language. FilesTrace, our file tracking and RTI register product, came directly out of that work and is in daily use."
+            "text": "Yes, and it is a large part of what we do. Public offices carry the hardest version of the problem: statutory deadlines and an audit trail that has to hold up. FilesTrace, our file tracking and RTI register product, came directly out of that work."
           }
         },
         {
           "@type": "Question",
-          "name": "Which Indian languages do you support?",
+          "name": "How does an AI consulting engagement start?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Malayalam, Hindi, Tamil, Telugu, Kannada, Marathi, Bengali and English are the ones we work in most, and adding one is a configuration job rather than a rebuild. It holds across channels as well as inside the database: a WhatsApp voice note in Malayalam is transcribed in Malayalam, triaged in Malayalam and answered in Malayalam, with no English round trip in the middle to lose the meaning."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can people reach us on WhatsApp instead of a portal or a form?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, and in our experience it is the channel that actually gets used. We take WhatsApp messages, voice notes, photographed paper forms, phone calls, SMS, email and web forms into the same queue, so the office works one list instead of seven inboxes. Voice becomes text in the language it was spoken, documents are read into fields, and the reply goes back out on the channel it came in on."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you build with low-code tools or write everything from scratch?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Whichever one is honest for the problem. Internal tools, approval flows and back-office screens are often faster and cheaper on a low-code platform, and we will say so. The parts that carry your differentiation, your scale or your audit trail get written properly. What we will not do is hand you a platform you cannot leave."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "We already have years of customer data. Can you do something with it?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "That is usually the fastest win available. Most organisations are paying to store operational and customer data that answers no questions. We do the data engineering — pipelines, cleaning, modelling, a warehouse you can query — and then the analysis: what the patterns say, what to forecast, and which decisions were being made on instinct."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are you an AI company or an IT services company?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We are engineers who use AI where it earns its place. A great deal of what an organisation needs is ordinary IT services done well — a system that stays up, an integration that holds, a migration that does not lose records. We do that work, and we add AI to it when there is a real reason, not to have added AI."
+            "text": "With the problem, not the model. We look at where work piles up, test a small prototype on your real data, and only then recommend a build. If a rule, a form or a better process would do the job, we'll say so."
           }
         }
       ]
@@ -676,505 +236,367 @@ h2{font-family:var(--display);font-weight:500;letter-spacing:-.03em;
 </head>
 <body>
 
-<header class="site-head" id="head">
-  <div class="wrap head-in">
-    <a class="brand" href="#top" aria-label="Buddhyantra, home">
-      <svg width="27" height="43" viewBox="0 0 74 118" aria-hidden="true">
-        <rect x="6" y="2" width="11" height="106" rx="5.5" fill="#5A51C6"/>
-        <path d="M11 62 L66 86 L11 110 Z" fill="none" stroke="#5A51C6" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
-        <circle cx="11.5" cy="54" r="7" fill="#EF9F27"/>
-      </svg>
-      <span class="brand-txt">
-        <span class="brand-name">Buddh<em>yantra</em></span>
-        <span class="brand-tag">Intelligence, engineered.</span>
-      </span>
+<!-- ============ NAV ============ -->
+<div class="nav-shell">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Buddhyantra home">
+      <svg viewBox="0 0 74 118" aria-hidden="true"><rect x="6" y="2" width="11" height="106" rx="5.5" fill="var(--violet)"/><path d="M11 62 L66 86 L11 110 Z" fill="none" stroke="var(--violet)" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/><circle cx="11.5" cy="54" r="7" fill="var(--marigold)"/></svg>
+      <span class="brand-txt"><span>Buddh<em>yantra</em></span><span class="brand-tag">Intelligence, engineered.</span></span>
     </a>
-    <nav class="head-nav" aria-label="Primary">
-      <a class="head-link" href="#what-we-do">What we do</a>
-      <a class="head-link" href="#products">Products</a>
-      <a class="btn btn-ghost" href="#talk">Start a conversation</a>
-    </nav>
+    <div class="nav-links">
+      <a href="#what-we-do">Services</a>
+      <a href="#products">Products</a>
+      <a href="#engage">How we work</a>
+      <a href="#about">About</a>
+      <a href="#faq">Questions</a>
+    </div>
+    <div class="nav-end">
+      <a class="btn btn-primary" href="#talk">Talk to us</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11"/></svg></summary>
+        <div class="menu-panel">
+          <a href="#what-we-do">Services</a>
+          <a href="#products">Products</a>
+          <a href="#engage">How we work</a>
+          <a href="#about">About</a>
+          <a href="#faq">Questions</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-copy load-in">
+      <h1>There is a <span>better way</span> to build it.</h1>
+      <p class="lede">We build the web applications and mobile apps organisations run on, the platforms that connect them with the people they serve, and the AI that keeps every request moving to the right desk. Then we teach your team to carry it forward.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#talk">Start a conversation
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn btn-ghost" href="#products">See our products</a>
+      </div>
+    </div>
+
+    <div class="queue" aria-label="Example of an AI-triaged citizen request queue">
+      <div class="q-bar"><span class="live">Citizen requests · AI triage</span><span>Example data</span></div>
+      <ul class="q-list" id="queue"></ul>
+    </div>
   </div>
 </header>
 
-<main id="top">
+<main>
+<!-- ============ CAPABILITIES ============ -->
+<section class="caps" aria-label="What we build">
+  <p>What we design, build and run</p>
+  <div class="marquee"><div class="marquee-track" id="marquee"></div></div>
+</section>
 
-<section class="stage-wrap" id="stagewrap">
-  <div class="stage" id="stage" data-beat="0">
-    <div class="stage-bg" aria-hidden="true">
-      <span class="fb fb1"></span><span class="fb fb2"></span><span class="fb fb3"></span>
-      <span class="fb fb4"></span><span class="fb fb5"></span>
+<!-- ============ MANIFESTO ============ -->
+<section class="manifesto">
+  <div class="wrap">
+    <span class="eyebrow">Why we exist</span>
+    <p class="reveal-text" id="reveal">Every organisation starts the same way: a few pieces, laid out with care. Then it grows. Models bolted on, pilots that never shipped, a stack nobody owns. We don't take the blocks away. We steady them, then show you how to build.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="sec" id="what-we-do" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Services</span>
+      <h2>Web and mobile apps first, with AI where it earns its place.</h2>
+      <p>A small, deeply technical team of architects and engineers. The people who scope your work are the people who build it, and the people who train your team to run it.</p>
     </div>
-    <div class="beats" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+    <div class="bento">
+      <article class="card c-it">
+        <span class="verb">IT services</span>
+        <h3>Web applications and mobile apps, built to last</h3>
+        <p>Where most of our work begins. Customer-facing apps, internal tools and the APIs between them, designed with the people who will use them every day and shipped to the stores and the browser.</p>
+        <ul>
+          <li>Web applications, admin consoles and progressive web apps</li>
+          <li>Android and iOS apps, with offline support where the network is unreliable</li>
+          <li>APIs and integrations with the systems you already run</li>
+          <li>Legacy systems carried across, not ripped out</li>
+        </ul>
+        <div class="viz chips" aria-hidden="true">
+          <span class="chip on">Web apps</span><span class="chip on">Android</span><span class="chip on">iOS</span><span class="chip">PWA</span><span class="chip">APIs</span><span class="chip">Dashboards</span><span class="chip">Cloud &amp; self-hosted</span>
+        </div>
+      </article>
+      <article class="card c-ai">
+        <span class="verb">AI consulting</span>
+        <h3>AI where it earns its place</h3>
+        <p>Classify and route, triage what is urgent, summarise before a human opens it, chase the follow-up.</p>
+        <div class="viz route" aria-hidden="true">
+          <div><span>grievance</span><span>→ Water Authority</span></div>
+          <div><span>RTI request</span><span>→ RTI Cell</span></div>
+          <div><span>pension query</span><span>→ Social Welfare</span></div>
+        </div>
+      </article>
+      <article class="card c-train">
+        <span class="verb">AI training</span>
+        <h3>Teach your team to use AI well</h3>
+        <p>Hands-on training for engineers, officers and managers, run on your own work rather than toy examples. Everyone leaves knowing what AI is good for, where it fails, and how to check it.</p>
+        <div class="viz course" aria-hidden="true">
+          <div><b>01</b><span>Prompting and checking the output</span><i>all staff</i></div>
+          <div><b>02</b><span>AI-assisted development</span><i>engineers</i></div>
+          <div><b>03</b><span>Agents, tools and MCP</span><i>engineers</i></div>
+          <div><b>04</b><span>Using AI safely with public data</span><i>leaders</i></div>
+        </div>
+      </article>
+      <article class="card c-citizen">
+        <span class="verb">Citizen connect</span>
+        <h3>Put the public in front of the department, without a middleman</h3>
+        <p>Grievance portals, service request apps and WhatsApp services that let a citizen reach the right office, and let the office see every request, its status and its deadline in one place.</p>
+        <div class="viz chips" aria-hidden="true">
+          <span class="chip on">WhatsApp</span><span class="chip">Citizen portal</span><span class="chip">Mobile app</span><span class="chip">Phone line</span><span class="chip">Email</span><span class="chip">Scanned forms</span>
+        </div>
+      </article>
+      <article class="card c-data">
+        <span class="verb">Data &amp; analytics</span>
+        <h3>Make the data you already hold answer questions</h3>
+        <p>Pipelines, cleaning, modelling and a warehouse, then forecasts, patterns and the decisions that were being made on instinct.</p>
+        <div class="viz" aria-hidden="true">
+          <svg class="spark" viewBox="0 0 400 110" preserveAspectRatio="none">
+            <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--violet-2)" stop-opacity=".35"/><stop offset="1" stop-color="var(--violet-2)" stop-opacity="0"/></linearGradient></defs>
+            <g stroke="var(--line)" stroke-width="1"><line x1="0" y1="30" x2="400" y2="30"/><line x1="0" y1="65" x2="400" y2="65"/><line x1="0" y1="100" x2="400" y2="100"/></g>
+            <path d="M0 88 L40 80 L80 84 L120 70 L160 74 L200 58 L240 62 L280 46" fill="none" stroke="var(--violet)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M0 88 L40 80 L80 84 L120 70 L160 74 L200 58 L240 62 L280 46 L280 110 L0 110Z" fill="url(#sg)"/>
+            <path d="M280 46 L320 40 L360 30 L400 22" fill="none" stroke="var(--marigold)" stroke-width="2.5" stroke-dasharray="5 6" stroke-linecap="round"/>
+            <circle cx="280" cy="46" r="5" fill="var(--violet)"/>
+          </svg>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <div class="wrap wrap-wide stage-grid">
-      <div>
-        <div class="sentence-wrap">
-          <h1 class="sentence">
-            <span class="line line-1 on">There is a</span>
-            <span class="line line-2">better way to</span>
-            <span class="line line-3">build it<span class="dot">.</span></span>
-          </h1>
-          <div class="ph-layer" aria-hidden="true">
-            <span class="ph ph-2"><i></i><i></i><i></i></span>
-            <span class="ph ph-3"><i></i><i></i></span>
+<!-- ============ PRODUCTS ============ -->
+<section class="sec flow" id="products">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Products</span>
+      <h2>Things we built, and still run.</h2>
+      <p>Software in daily use by the organisations it was made for, which is why we keep supporting it long after the invoice cleared.</p>
+    </div>
+
+    <div class="products">
+      <!-- Crosdesk -->
+      <article class="product" id="crosdesk">
+        <div>
+          <div class="prod-head">
+            <img src="assets/crosdesk/crosdesk-mark.svg" width="48" height="48" alt="">
+            <h3>Cros<em>desk</em></h3>
+          </div>
+          <div class="badges"><span class="tag dept">AI-enabled</span><span class="tag dept">MCP server</span><span class="tag">Self-hosted or cloud</span></div>
+          <p class="q">One project. Many departments.</p>
+          <p class="body">Project management for organisations where several departments deliver the same project. Draw the work on a canvas, press Verify, and Crosdesk computes the dates. Each department plans its part into its own sprints, sees only what it should, and the dashboard shows where the plan slipped and why.</p>
+          <ul class="ticks">
+            <li>A node-based canvas that turns into a dated plan, with a baseline to measure slips against</li>
+            <li>Department sprints, backlogs, epics, features with approvals, and releases</li>
+            <li>Thirteen reports, each answering one question honestly, plus a department scorecard</li>
+            <li>Meetings, todos, versioned documents and bug recordings with console and network logs, all on the work itself</li>
+          </ul>
+          <div class="mcp">
+            <b>Built for AI agents</b>
+            <span>Crosdesk ships an MCP server. Connect Claude, Cursor or any MCP client and it works as you, in one workspace, with exactly your access, and every change it makes is in the audit log.</span>
+          </div>
+          <div class="prod-ctas" style="margin-top:24px">
+            <a class="btn btn-primary" href="https://crosdesk.com" target="_blank" rel="noopener">Visit crosdesk.com
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a>
           </div>
         </div>
-        <p class="beat-note" aria-live="polite">
-          <span class="n1 on">Every organisation starts the same way: a few pieces, laid out with care.</span>
-          <span class="n2">Then it grows. Models bolted on, pilots that never shipped, a stack nobody owns.</span>
-          <span class="n3">We don't take the blocks away. We steady them, then show you how to build.</span>
-        </p>
-      </div>
-
-      <svg class="scene" viewBox="0 0 620 430" role="img" aria-label="A child builds with blocks: a neat stack, then a toppling tower, then a solid structure steadied by a caped hero kid wearing the Buddhyantra mark.">
-       <g class="cam">
-        <ellipse cx="145" cy="374" rx="96" ry="13" fill="#16142E" opacity=".07"/>
-        <ellipse cx="370" cy="376" rx="120" ry="11" fill="#16142E" opacity=".06"/>
-        <line x1="20" y1="380" x2="600" y2="380" stroke="#16142E" stroke-opacity=".14" stroke-width="2" stroke-linecap="round"/>
-
-        <g class="kid-wrap">
-          <path class="fx arm-up" d="M180 268 Q224 248 228 210" fill="none" stroke="var(--skin)" stroke-width="19" stroke-linecap="round"/>
-          <circle class="fx arm-up" cx="230" cy="199" r="13" fill="var(--skin)"/>
-          <ellipse cx="145" cy="356" rx="64" ry="24" fill="var(--indigo-deep)"/>
-          <rect x="106" y="248" width="78" height="102" rx="32" fill="var(--indigo)"/>
-          <circle cx="190" cy="214" r="8" fill="var(--skin)"/>
-          <circle cx="145" cy="205" r="46" fill="var(--skin)"/>
-          <path d="M99 205 A46 46 0 0 1 191 205 L191 198 Q168 185 145 187 Q122 189 99 198 Z" fill="#2A2438"/>
-
-          <g class="fx f-calm">
-            <circle cx="130" cy="210" r="5" fill="#2A2438"/>
-            <circle cx="160" cy="210" r="5" fill="#2A2438"/>
-            <path d="M136 232 L156 232" stroke="#2A2438" stroke-width="3.5" stroke-linecap="round"/>
-          </g>
-
-          <g class="fx f-tense">
-            <circle cx="130" cy="212" r="4" fill="#2A2438"/>
-            <circle cx="160" cy="212" r="4" fill="#2A2438"/>
-            <path d="M122 199 L138 191" stroke="#2A2438" stroke-width="3.5" stroke-linecap="round"/>
-            <path d="M168 199 L152 191" stroke="#2A2438" stroke-width="3.5" stroke-linecap="round"/>
-            <path d="M132 235 Q139 228 145 234 Q151 240 159 233" fill="none" stroke="#2A2438" stroke-width="3.5" stroke-linecap="round"/>
-            <path class="sweat" d="M187 178 Q194 189 187 195 Q180 189 187 178 Z" fill="#6FA8DC"/>
-          </g>
-
-          <g class="fx f-happy">
-            <circle cx="116" cy="226" r="7" fill="#F2A0A0" opacity=".5"/>
-            <circle cx="174" cy="226" r="7" fill="#F2A0A0" opacity=".5"/>
-            <path d="M123 213 Q130 204 137 213" fill="none" stroke="#2A2438" stroke-width="3.5" stroke-linecap="round"/>
-            <path d="M153 213 Q160 204 167 213" fill="none" stroke="#2A2438" stroke-width="3.5" stroke-linecap="round"/>
-            <path d="M130 228 Q145 245 162 228" fill="none" stroke="#2A2438" stroke-width="4" stroke-linecap="round"/>
-          </g>
-
-          <path class="fx arm-reach" d="M180 270 Q220 268 248 288" fill="none" stroke="var(--skin)" stroke-width="19" stroke-linecap="round"/>
-          <circle class="fx arm-reach" cx="254" cy="291" r="13" fill="var(--skin)"/>
-        </g>
-
-        <g class="wob">
-          <path d="M196 150 Q206 141 216 150" fill="none" stroke="#16142E" stroke-width="3" stroke-linecap="round" opacity=".55"/>
-          <path d="M186 164 Q198 152 210 164" fill="none" stroke="#16142E" stroke-width="3" stroke-linecap="round" opacity=".3"/>
-        </g>
-
-        <g id="tower">
-          <g class="blk" id="b1"><g class="bi">
-            <rect x="-27" y="-20" width="54" height="40" rx="8" fill="var(--indigo)"/>
-            <rect x="-17" y="-26" width="13" height="7" rx="3" fill="var(--indigo)"/>
-            <rect x="4" y="-26" width="13" height="7" rx="3" fill="var(--indigo)"/>
-          </g></g>
-          <g class="blk" id="b2"><g class="bi">
-            <rect x="-27" y="-20" width="54" height="40" rx="8" fill="var(--marigold)"/>
-            <rect x="-17" y="-26" width="13" height="7" rx="3" fill="var(--marigold)"/>
-            <rect x="4" y="-26" width="13" height="7" rx="3" fill="var(--marigold)"/>
-          </g></g>
-          <g class="blk" id="b3"><g class="bi">
-            <rect x="-27" y="-20" width="54" height="40" rx="8" fill="var(--teal)"/>
-            <rect x="-17" y="-26" width="13" height="7" rx="3" fill="var(--teal)"/>
-            <rect x="4" y="-26" width="13" height="7" rx="3" fill="var(--teal)"/>
-          </g></g>
-          <g class="blk" id="b4"><g class="bi">
-            <rect x="-27" y="-20" width="54" height="40" rx="8" fill="var(--rose)"/>
-            <rect x="-17" y="-26" width="13" height="7" rx="3" fill="var(--rose)"/>
-            <rect x="4" y="-26" width="13" height="7" rx="3" fill="var(--rose)"/>
-          </g></g>
-          <g class="blk" id="b5"><g class="bi">
-            <rect x="-27" y="-20" width="54" height="40" rx="8" fill="var(--lav)"/>
-            <rect x="-17" y="-26" width="13" height="7" rx="3" fill="var(--lav)"/>
-            <rect x="4" y="-26" width="13" height="7" rx="3" fill="var(--lav)"/>
-          </g></g>
-        </g>
-
-        <g class="fx hero">
-         <g class="hero-in">
-          <defs>
-            <clipPath id="hclip"><path d="M494 166 C532 166 551 188 550 216 C549 242 532 264 510 270 C498 273 486 272 476 268 C456 260 442 240 441 214 C440 186 458 166 494 166 Z"/></clipPath>
-            <clipPath id="tclip"><path d="M476 270 C464 286 460 310 467 328 Q496 341 525 328 C533 310 529 286 518 270 Q497 278 476 270 Z"/></clipPath>
-            <clipPath id="dclip"><path d="M464 314 Q464 305 473 305 L520 305 Q529 305 529 314 L529 336 Q529 356 496 361 Q464 356 464 336 Z"/></clipPath>
-          </defs>
-
-          <ellipse cx="497" cy="380" rx="58" ry="10" fill="#16142E" opacity=".09"/>
-
-          <g class="cape">
-            <path d="M520 276 C576 296 594 342 576 386 C554 368 534 358 514 352 Z"
-              fill="var(--cape)" stroke="var(--outline)" stroke-width="4.5" stroke-linejoin="round"/>
-            <path d="M520 276 C550 294 562 320 559 344 C545 350 530 352 514 352 Z"
-              fill="var(--cape-2)" opacity=".6"/>
-          </g>
-
-          <g stroke="var(--outline)" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
-            <path d="M456 222 C438 212 424 186 427 162 C443 171 457 195 463 212 Z" fill="var(--skin-2)"/>
-            <path d="M540 212 C551 201 559 186 557 172 C546 179 537 194 533 206 Z" fill="var(--skin-sh)"/>
-
-            <path d="M476 330 C467 341 464 357 468 367 C472 375 479 377 485 373 C491 369 491 355 489 343 Z" fill="var(--skin-sh)"/>
-            <ellipse cx="474" cy="371" rx="16" ry="8.5" fill="var(--skin-sh)"/>
-            <path d="M508 332 C499 345 497 361 501 370 C505 378 514 379 519 374 C525 368 524 353 521 341 Z" fill="var(--skin-2)"/>
-            <ellipse cx="515" cy="372" rx="17" ry="8.5" fill="var(--skin-2)"/>
-
-            <path d="M476 270 C464 286 460 310 467 328 Q496 341 525 328 C533 310 529 286 518 270 Q497 278 476 270 Z" fill="var(--skin-2)"/>
-          </g>
-          <g clip-path="url(#tclip)">
-            <path d="M512 262 C528 288 528 316 516 344 L536 344 L536 262 Z" fill="var(--skin-sh)" opacity=".45"/>
-          </g>
-
-          <path d="M464 314 Q464 305 473 305 L520 305 Q529 305 529 314 L529 336 Q529 356 496 361 Q464 356 464 336 Z"
-            fill="var(--cape)" stroke="var(--outline)" stroke-width="4.5" stroke-linejoin="round"/>
-          <g clip-path="url(#dclip)">
-            <path d="M512 300 C526 322 524 346 504 364 L536 364 L536 300 Z" fill="var(--cape-2)" opacity=".55"/>
-          </g>
-          <path d="M465 328 Q496 338 529 328" fill="none" stroke="var(--outline)" stroke-width="3.5" stroke-linecap="round" opacity=".8"/>
-          <circle cx="523" cy="316" r="5" fill="#FFFFFF" stroke="var(--outline)" stroke-width="3"/>
-          <g transform="translate(482.9,315) scale(.29)">
-            <rect x="5" y="2" width="13" height="106" rx="6.5" fill="var(--indigo)"/>
-            <path d="M11 62 L66 86 L11 110 Z" fill="none" stroke="var(--indigo)" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
-            <circle cx="11.5" cy="54" r="9" fill="var(--marigold)"/>
-          </g>
-
-          <path d="M522 290 Q556 272 566 236" fill="none" stroke="var(--outline)" stroke-width="21" stroke-linecap="round"/>
-          <path d="M522 290 Q556 272 566 236" fill="none" stroke="var(--skin-sh)" stroke-width="13.5" stroke-linecap="round"/>
-          <circle cx="568" cy="224" r="13" fill="var(--skin-sh)" stroke="var(--outline)" stroke-width="4.5"/>
-          <path d="M559 219 Q568 224 559 229 M568 212 Q574 217 571 223" fill="none" stroke="var(--outline)" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
-
-
-          <path d="M470 290 Q436 272 426 236" fill="none" stroke="var(--outline)" stroke-width="21" stroke-linecap="round"/>
-          <path d="M470 290 Q436 272 426 236" fill="none" stroke="var(--skin-2)" stroke-width="13.5" stroke-linecap="round"/>
-          <circle cx="424" cy="224" r="13" fill="var(--skin-2)" stroke="var(--outline)" stroke-width="4.5"/>
-          <path d="M433 219 Q424 224 433 229 M424 212 Q418 217 421 223" fill="none" stroke="var(--outline)" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
-
-          <path d="M494 166 C532 166 551 188 550 216 C549 242 532 264 510 270 C498 273 486 272 476 268 C456 260 442 240 441 214 C440 186 458 166 494 166 Z"
-            fill="var(--skin-2)" stroke="var(--outline)" stroke-width="5" stroke-linejoin="round"/>
-          <g clip-path="url(#hclip)">
-            <path d="M524 156 C548 188 552 240 522 280 L566 280 L566 156 Z" fill="var(--skin-sh)" opacity=".4"/>
-            <ellipse cx="487" cy="181" rx="16" ry="9" fill="#FFFFFF" opacity=".24" transform="rotate(-26 487 181)"/>
-          </g>
-
-          <path d="M461 191 Q473 182 486 188" fill="none" stroke="var(--outline)" stroke-width="4.5" stroke-linecap="round"/>
-          <path d="M508 186 Q522 179 534 188" fill="none" stroke="var(--outline)" stroke-width="4.5" stroke-linecap="round"/>
-
-          <ellipse cx="478" cy="215" rx="14.5" ry="19" fill="#FFFFFF" stroke="var(--outline)" stroke-width="4" transform="rotate(-9 478 215)"/>
-          <ellipse cx="520" cy="212" rx="15.5" ry="20" fill="#FFFFFF" stroke="var(--outline)" stroke-width="4" transform="rotate(7 520 212)"/>
-          <ellipse cx="470" cy="217" rx="6" ry="8" fill="var(--outline)"/>
-          <ellipse cx="512" cy="214" rx="6.5" ry="8.5" fill="var(--outline)"/>
-          <circle cx="468" cy="213" r="2.2" fill="#FFFFFF"/>
-          <circle cx="510" cy="210" r="2.4" fill="#FFFFFF"/>
-
-          <path d="M492 232 Q499 238 505 232" fill="none" stroke="var(--outline)" stroke-width="3.5" stroke-linecap="round"/>
-          <path d="M483 244 Q501 264 520 242" fill="none" stroke="var(--outline)" stroke-width="4.5" stroke-linecap="round"/>
-          <path d="M519 236 Q527 244 522 253" fill="none" stroke="var(--outline)" stroke-width="3" stroke-linecap="round" opacity=".45"/>
-
-         </g>
-        </g>
-
-        <g class="sparkfield">
-          <g transform="translate(276,262)"><g class="spark s1"><path d="M0 -9 Q1.7 -1.7 9 0 Q1.7 1.7 0 9 Q-1.7 1.7 -9 0 Q-1.7 -1.7 0 -9 Z" fill="var(--marigold)"/></g></g>
-          <g transform="translate(344,238)"><g class="spark s2"><path d="M0 -11 Q2 -2 11 0 Q2 2 0 11 Q-2 2 -11 0 Q-2 -2 0 -11 Z" fill="var(--marigold)"/></g></g>
-          <g transform="translate(408,192)"><g class="spark s3"><path d="M0 -9 Q1.7 -1.7 9 0 Q1.7 1.7 0 9 Q-1.7 1.7 -9 0 Q-1.7 -1.7 0 -9 Z" fill="var(--teal)"/></g></g>
-          <g transform="translate(258,320)"><g class="spark s4"><path d="M0 -7 Q1.3 -1.3 7 0 Q1.3 1.3 0 7 Q-1.3 1.3 -7 0 Q-1.3 -1.3 0 -7 Z" fill="var(--rose)"/></g></g>
-          <g transform="translate(590,178)"><g class="spark s5"><path d="M0 -8 Q1.5 -1.5 8 0 Q1.5 1.5 0 8 Q-1.5 1.5 -8 0 Q-1.5 -1.5 0 -8 Z" fill="var(--indigo)"/></g></g>
-        </g>
-       </g>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<section class="band band-paper" id="what-we-do">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="label">what we do</p>
-      <h2>AI consulting and IT services, applied honestly.</h2>
-      <p class="lede">Buddhyantra is a small, deeply technical team of architects and engineers. Not a sales-led shop — the people who scope your work are the people who build it. We do two things that belong together: the channel your organisation meets its people through, and the AI that manages everything coming back through it.</p>
-    </div>
-
-    <div class="offers reveal">
-      <article class="offer offer-a">
-        <svg class="glyph" width="60" height="34" viewBox="0 0 60 34" aria-hidden="true">
-          <rect x="1" y="19" width="26" height="14" rx="4" fill="var(--indigo)"/>
-          <rect x="31" y="19" width="26" height="14" rx="4" fill="var(--indigo)" opacity=".35"/>
-          <rect x="16" y="1" width="26" height="14" rx="4" fill="var(--marigold)"/>
-        </svg>
-        <p class="who">connect</p>
-        <h3>Custom made apps people will actually use</h3>
-        <p>Web and mobile applications that put a citizen in front of a government department, or a customer in front of your business, without a middleman. Shaped around the process you actually follow — and built in the language the person on the other end reads, types and speaks in. Legacy systems get carried across, not ripped out.</p>
-      </article>
-
-      <article class="offer offer-b">
-        <svg class="glyph" width="60" height="34" viewBox="0 0 60 34" aria-hidden="true">
-          <rect x="1" y="19" width="26" height="14" rx="4" fill="var(--teal)"/>
-          <rect x="31" y="19" width="26" height="14" rx="4" fill="var(--teal)"/>
-          <rect x="16" y="1" width="26" height="14" rx="4" fill="var(--indigo)"/>
-        </svg>
-        <p class="who">automate</p>
-        <h3>AI for your business or organisation</h3>
-        <p>Open a channel and it fills up. We build the AI that manages what comes back: classifying and routing to the right desk, triaging what is urgent, summarising a thread before a human opens it, and chasing the follow-up nobody has time to chase. Applied where it earns its place, not everywhere at once.</p>
-      </article>
-
-      <article class="offer offer-c">
-        <svg class="glyph" width="60" height="34" viewBox="0 0 60 34" aria-hidden="true">
-          <rect x="1" y="19" width="26" height="14" rx="4" fill="var(--rose)"/>
-          <rect x="31" y="19" width="26" height="14" rx="4" fill="var(--rose)"/>
-          <rect x="16" y="1" width="26" height="14" rx="4" fill="var(--marigold)"/>
-        </svg>
-        <p class="who">decide</p>
-        <h3>Data engineering on the customer data you already hold</h3>
-        <p>Most organisations are paying to store years of operational and customer data that answers no questions. We do the pipelines, the cleaning, the modelling and the warehouse — then the part that pays for it: forecasts, patterns, and the decisions that were quietly being made on instinct.</p>
-      </article>
-
-      <article class="offer offer-d">
-        <svg class="glyph" width="60" height="34" viewBox="0 0 60 34" aria-hidden="true">
-          <rect x="1" y="19" width="26" height="14" rx="4" fill="var(--lav)"/>
-          <rect x="31" y="19" width="26" height="14" rx="4" fill="var(--marigold)"/>
-          <rect x="16" y="1" width="26" height="14" rx="4" fill="var(--teal)"/>
-        </svg>
-        <p class="who">advise</p>
-        <h3>IT consultancy for how you ship</h3>
-        <p>SDLC review, repository restructuring, low-code tool selection, and AI training for your own engineers. We start by finding where the work genuinely hurts — the handoffs, the merge queue, the release nobody wants to run — and build process around that instead of around a diagram.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="band claim" id="how-it-works">
-  <div class="wrap reveal">
-    <p class="label">how it works</p>
-    <h2>Any channel. Any language. One system.</h2>
-    <p>A citizen with a grievance is not going to log into a portal and fill a form in English. They will send a two-minute WhatsApp voice note in Malayalam, or photograph a paper application and send that instead. Multi-channel and multilingual intake is the whole problem — and it is the part most systems quietly push back onto the person who needed help.</p>
-
-    <ol class="flow">
-      <li class="step">
-        <span class="step-n">01 — in</span>
-        <h3>It arrives however they’re comfortable</h3>
-        <p>A WhatsApp voice note. A photo of a filled-in form. A phone call, an SMS, an email, a web form, or a walk-in at the counter. Nobody is asked to change language or channel in order to be heard, and no one channel is the “real” one.</p>
-        <ul class="chans">
-          <li>WhatsApp</li><li>voice note</li><li>phone call</li><li>SMS</li>
-          <li>email</li><li>web form</li><li>scanned paper</li>
-        </ul>
-      </li>
-
-      <li class="step">
-        <span class="step-n">02 — understood</span>
-        <h3>Speech and paper become something the system can act on</h3>
-        <p>Voice is transcribed in the language it was spoken, not translated into English first. Photographed forms, PDFs and letters are read into real fields. A rambling three-minute message becomes a subject, a department, a priority and a contact — with the original audio and scan kept beside it, because a transcript is evidence of a record, never the record.</p>
-      </li>
-
-      <li class="step">
-        <span class="step-n">03 — out</span>
-        <h3>The answer goes back the way it came</h3>
-        <p>Routed to the desk that can actually act, chased if it stalls, and answered on the same channel in the same language it arrived in. A petitioner who asked in Tamil is answered in Tamil — and the officer or the business owner replying never had to read or write a word of it.</p>
-      </li>
-    </ol>
-
-    <ul class="tongues">
-      <li>മലയാളം <span>Malayalam</span></li>
-      <li>हिन्दी <span>Hindi</span></li>
-      <li>தமிழ் <span>Tamil</span></li>
-      <li>తెలుగు <span>Telugu</span></li>
-      <li>ಕನ್ನಡ <span>Kannada</span></li>
-      <li>मराठी <span>Marathi</span></li>
-      <li>বাংলা <span>Bengali</span></li>
-      <li>English</li>
-    </ul>
-
-    <div class="rule"></div>
-    <p class="aside">Adding a language or a channel is configuration, not a rebuild.</p>
-  </div>
-</section>
-
-<section class="band" id="products">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="label">products</p>
-      <h2>Things we built, and still run.</h2>
-      <p class="lede">Not demos. Software in daily use by the organisations it was made for — which is also why we keep supporting it long after the invoice cleared. Each one started as the same conversation: an office drowning in what the public sends it.</p>
-    </div>
-
-    <article class="prod reveal">
-      <div>
-        <div class="prod-head">
-          <span class="prod-mark" aria-hidden="true">
-            <svg viewBox="0 0 104 98" fill="#FFFFFF">
-              <rect x="12" y="13" width="80" height="9" rx="3"/>
-              <rect x="12" y="24" width="15" height="61" rx="3"/>
-              <rect x="29" y="42" width="33" height="19" rx="3"/>
-              <rect x="29" y="63" width="63" height="22" rx="3"/>
-            </svg>
-          </span>
-          <h3 class="prod-name">Files<em>Trace</em></h3>
-        </div>
-
-        <p class="prod-line">Where is this file, what’s its status, and who did what to it?</p>
-        <p class="prod-body">FilesTrace is file tracking for government departments and organisations that run on paperwork. A citizen sends a voice note or a photo of a form; it comes back as a summarised file with the department, status and next desk already suggested. Every file is filed under a department, moves through a status lifecycle the office configures itself, can be forwarded to another desk, carries its attachments, and keeps an append-only history of everything that happened to it. When a citizen rings to ask what happened to their application, the answer is on the screen instead of in someone’s memory.</p>
-
-        <ul class="prod-pts">
-          <li>Voice notes and documents transcribed, summarised by AI, with the department, status and next desk suggested</li>
-          <li>Departments, wards and a status lifecycle you set up yourself — no code, no support ticket</li>
-          <li>A history that records every comment, forward and status change, and never lets one be edited away</li>
-          <li>Group-based access that spans departments, plus a shared calendar and an RTI Act register</li>
-          <li>Self-hosted on your own PostgreSQL, mobile-first, with PDF exports that match the screen</li>
-        </ul>
-
-        <a class="prod-more" href="products/filestrace.html">
-          More details
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12h13M13 6l6 6-6 6"/>
-          </svg>
+        <a class="shot" href="https://crosdesk.com" target="_blank" rel="noopener" aria-label="Visit crosdesk.com">
+          <span class="bar" aria-hidden="true"><i></i><i></i><i></i><span>crosdesk.com · project canvas</span></span>
+          <img src="assets/crosdesk/project-canvas.webp" width="1556" height="784" loading="lazy"
+               alt="The Crosdesk project canvas: four verified tasks across two departments connected in sequence, each with its status, department, duration and computed dates.">
+          <span class="go" aria-hidden="true">Open crosdesk.com <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 11l6-6M6 5h5v5"/></svg></span>
         </a>
-      </div>
+      </article>
 
-      <a class="prod-shot" href="products/filestrace.html" aria-label="FilesTrace product page">
-        <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
-        <img src="assets/filestrace/dashboard.jpg" width="1556" height="784" loading="lazy"
-             alt="The FilesTrace dashboard: counts of total, open and closed files, median turnaround, an ageing breakdown of open files, and bars splitting files by status and department.">
-      </a>
-    </article>
+      <!-- FilesTrace -->
+      <article class="product flip" id="filestrace">
+        <div>
+          <div class="prod-head">
+            <span class="fmark" aria-hidden="true"><svg viewBox="0 0 104 98" fill="#FFFFFF"><rect x="12" y="13" width="80" height="9" rx="3"/><rect x="12" y="24" width="15" height="61" rx="3"/><rect x="29" y="42" width="33" height="19" rx="3"/><rect x="29" y="63" width="63" height="22" rx="3"/></svg></span>
+            <h3>Files<em>Trace</em></h3>
+          </div>
+          <div class="badges"><span class="tag dept">AI summaries</span><span class="tag">RTI register</span><span class="tag">Self-hosted</span></div>
+          <p class="q">Where is this file, what's its status, and who did what to it?</p>
+          <p class="body">File tracking for government departments and organisations that run on paperwork. A citizen sends a message or a photo of a form; it comes back as a summarised file with the department, status and next desk already suggested.</p>
+          <ul class="ticks">
+            <li>Messages and documents summarised by AI, with department and next desk suggested</li>
+            <li>Departments, wards and a status lifecycle you configure yourself, no code needed</li>
+            <li>An append-only history of every comment, forward and status change</li>
+            <li>Group-based access, a shared calendar and an RTI Act register</li>
+            <li>Self-hosted on your own PostgreSQL, mobile-first, with matching PDF exports</li>
+          </ul>
+          <a class="btn btn-ghost" href="products/filestrace.html">More about FilesTrace
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        </div>
+        <a class="shot" href="products/filestrace.html" aria-label="FilesTrace product page">
+          <span class="bar" aria-hidden="true"><i></i><i></i><i></i><span>FilesTrace · dashboard</span></span>
+          <img src="assets/filestrace/dashboard.jpg" width="1556" height="784" loading="lazy"
+               alt="The FilesTrace dashboard: counts of total, open and closed files, median turnaround, an ageing breakdown of open files, and bars splitting files by status and department.">
+          <span class="go" aria-hidden="true">More about FilesTrace <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </a>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="band band-paper" id="faq">
+<!-- ============ CITIZEN CONNECT FLOW ============ -->
+<section class="sec" id="citizen">
   <div class="wrap">
-    <div class="reveal">
-      <p class="label">questions</p>
+    <div class="sec-head">
+      <span class="eyebrow">Citizen connect</span>
+      <h2>Every request heard. Every request tracked.</h2>
+      <p>A citizen with a grievance won't log into a portal and fill in a long form. They'll send a WhatsApp message, call, or walk in with paper. We meet them there, and give the office one system behind it.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="no">01 · intake</span>
+        <h3>It arrives however people are comfortable</h3>
+        <p>WhatsApp, a call, the portal, an email, a scanned form or a walk-in. All of it lands in one queue instead of seven inboxes.</p>
+        <div class="chips" aria-hidden="true"><span class="chip">WhatsApp</span><span class="chip">Portal</span><span class="chip">Call</span><span class="chip">Paper</span></div>
+      </div>
+      <div class="step">
+        <span class="no">02 · triage</span>
+        <h3>AI turns it into a case someone can act on</h3>
+        <p>Each request gets a subject, a department, a priority and a short summary. Officers confirm or correct it, and the original message and attachments stay beside it as evidence.</p>
+        <div class="chips" aria-hidden="true"><span class="chip">Classify</span><span class="chip">Prioritise</span><span class="chip">Summarise</span></div>
+      </div>
+      <div class="step">
+        <span class="no">03 · resolve</span>
+        <h3>Routed, chased and answered</h3>
+        <p>Sent to the desk that can act, followed up when it stalls, and answered on the same channel it came in on. Every step is logged, so the audit trail holds up.</p>
+        <div class="chips" aria-hidden="true"><span class="chip">Route</span><span class="chip">Escalate</span><span class="chip">Reply</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENGAGEMENT ============ -->
+<section class="sec flow" id="engage">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How we work</span>
+      <h2>From a messy problem to software in daily use.</h2>
+      <p>The same path whether it's a mobile app, an AI pilot, a citizen platform or an IT overhaul. We tell you early if AI isn't the answer.</p>
+    </div>
+    <div class="steps four">
+      <div class="step"><span class="no">01 · diagnose</span><h3>Find where the work hurts</h3><p>We sit with the people doing the work: the queue, the handoffs, the release nobody wants to run.</p></div>
+      <div class="step"><span class="no">02 · prototype</span><h3>Prove it on real data</h3><p>A small working version against your actual records, so the decision is based on results, not slides.</p></div>
+      <div class="step"><span class="no">03 · build</span><h3>Ship it properly</h3><p>Integrated with the systems you already run, documented, and owned by you. No platform you can't leave.</p></div>
+      <div class="step"><span class="no">04 · train &amp; support</span><h3>Keep it running</h3><p>We stay on after go-live, tune the models, and train your team to carry it forward.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec" id="about">
+  <div class="wrap about">
+    <div class="sec-head">
+      <span class="eyebrow">About us</span>
+      <h2>An engineering company from Kozhikode.</h2>
+      <p>Buddhyantra (बुद्धि + यन्त्र, the instrument of intelligence) is a software company based in Kozhikode, Kerala. We started with web applications and mobile apps, and still lead with them. AI came later, added where it does real work: routing requests, summarising documents, and running inside the products we build.</p>
+      <p>We work with government departments, businesses and institutions across India. We keep the team small on purpose, so the people you meet at the first conversation are the people who write the code.</p>
+    </div>
+    <div class="facts">
+      <div class="fact">
+        <span class="verb">Leadership</span>
+        <h3>Anusree Raj</h3>
+        <p>Director, Buddhyantra LLP</p>
+      </div>
+      <div class="fact">
+        <span class="verb">Registered office</span>
+        <address>
+          Buddhyantra LLP<br>
+          Padingare Purkkal Paramba, 36/1621 A<br>
+          Vengeri, Karaparamba, Nadakkavu<br>
+          Kozhikode, Kerala 673010<br>
+          India
+        </address>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Vengeri%2C%20Karaparamba%2C%20Kozhikode%2C%20Kerala%20673010" target="_blank" rel="noopener">Open in Google Maps</a></p>
+      </div>
+      <div class="fact">
+        <span class="verb">Write to us</span>
+        <p><a href="mailto:hello@buddhyantra.com">hello@buddhyantra.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec flow" id="faq">
+  <div class="wrap faq">
+    <div class="sec-head">
+      <span class="eyebrow">Questions</span>
       <h2>The things people ask first.</h2>
-      <p class="lede">Usually before the second email. Answered here so the first conversation can start somewhere more interesting.</p>
+      <p>Answered here so the first conversation can start somewhere more interesting.</p>
     </div>
-
-    <div class="faq reveal">
-      <details>
-        <summary>What does Buddhyantra actually do?</summary>
-        <p class="answer">Two things that belong together. We build the channel an organisation meets its people through — a citizen portal, a grievance app, a customer-facing service, in the languages those people speak. Then we build the AI that manages what comes back through it: routing, triage, follow-up, and the reporting that falls out of the data it generates.</p>
-      </details>
-
-      <details>
-        <summary>Do you work with government departments?</summary>
-        <p class="answer">Yes, and it is a large part of what we do. Public offices carry the hardest version of the problem: statutory deadlines, an audit trail that has to hold up, and a public that does not share one language. <a href="products/filestrace.html">FilesTrace</a>, our file tracking and RTI register product, came directly out of that work and is in daily use.</p>
-      </details>
-
-      <details>
-        <summary>Which Indian languages do you support?</summary>
-        <p class="answer">Malayalam, Hindi, Tamil, Telugu, Kannada, Marathi, Bengali and English are the ones we work in most, and adding one is a configuration job rather than a rebuild. It holds across channels as well as inside the database: a WhatsApp voice note in Malayalam is transcribed in Malayalam, triaged in Malayalam and answered in Malayalam, with no English round trip in the middle to lose the meaning.</p>
-      </details>
-
-      <details>
-        <summary>Can people reach us on WhatsApp instead of a portal or a form?</summary>
-        <p class="answer">Yes, and in our experience it is the channel that actually gets used. We take WhatsApp messages, voice notes, photographed paper forms, phone calls, SMS, email and web forms into the same queue, so the office works one list instead of seven inboxes. Voice becomes text in the language it was spoken, documents are read into fields, and the reply goes back out on the channel it came in on.</p>
-      </details>
-
-      <details>
-        <summary>Do you build with low-code tools or write everything from scratch?</summary>
-        <p class="answer">Whichever one is honest for the problem. Internal tools, approval flows and back-office screens are often faster and cheaper on a low-code platform, and we will say so. The parts that carry your differentiation, your scale or your audit trail get written properly. What we will not do is hand you a platform you cannot leave.</p>
-      </details>
-
-      <details>
-        <summary>We already have years of customer data. Can you do something with it?</summary>
-        <p class="answer">That is usually the fastest win available. Most organisations are paying to store operational and customer data that answers no questions. We do the data engineering — pipelines, cleaning, modelling, a warehouse you can query — and then the analysis: what the patterns say, what to forecast, and which decisions were being made on instinct.</p>
-      </details>
-
-      <details>
-        <summary>Are you an AI company or an IT services company?</summary>
-        <p class="answer">We are engineers who use AI where it earns its place. A great deal of what an organisation needs is ordinary IT services done well — a system that stays up, an integration that holds, a migration that does not lose records. We do that work, and we add AI to it when there is a real reason, not to have added AI.</p>
-      </details>
+    <div>
+      <details open><summary>What does Buddhyantra actually do?</summary>
+        <p>We build web applications and mobile apps, and that is where most engagements start. Around them we build citizen connect platforms, add AI that handles routing, triage, follow-up and reporting, and train your team to use AI well. We also make two products of our own, Crosdesk and FilesTrace.</p></details>
+      <details><summary>What is Crosdesk?</summary>
+        <p>Crosdesk is our AI-enabled project management product for organisations where several departments deliver the same project. It has an MCP server, so Claude, Cursor or any MCP client can read and update work as you, with exactly your access. You can find it at <a href="https://crosdesk.com" target="_blank" rel="noopener">crosdesk.com</a>.</p></details>
+      <details><summary>What does your AI training cover?</summary>
+        <p>It depends on who is in the room. For all staff: writing good prompts and checking what comes back. For engineers: AI-assisted development, agents, tools and MCP. For leaders: where AI is worth the risk, and how to handle public and personal data. Sessions are hands-on and use your own work as the material.</p></details>
+      <details><summary>Do you build mobile apps for both Android and iOS?</summary>
+        <p>Yes. We build for both stores, plus progressive web apps where an install is more than people need. Where the network is unreliable, we design the app to keep working offline and sync later.</p></details>
+      <details><summary>Do you work with government departments?</summary>
+        <p>Yes, and it is a large part of what we do. Public offices carry the hardest version of the problem: statutory deadlines and an audit trail that has to hold up. FilesTrace, our file tracking and RTI register product, came directly out of that work.</p></details>
+      <details><summary>How does an AI consulting engagement start?</summary>
+        <p>With the problem, not the model. We look at where work piles up, test a small prototype on your real data, and only then recommend a build. If a rule, a form or a better process would do the job, we'll say so.</p></details>
     </div>
   </div>
 </section>
 
-<section class="band cta" id="talk">
-  <div class="wrap reveal">
-    <p class="label">start here</p>
-    <h2>Tell us what isn't working.</h2>
-    <p>Bring the messy version. A queue nobody is clearing, a helpline in one language for a public that speaks four, a stalled AI pilot, a vague board mandate. We'll tell you honestly whether AI is the answer.</p>
-    <div class="cta-actions">
-      <a class="btn btn-lg" href="mailto:hello@buddhyantra.com?subject=Starting%20a%20conversation">Start a conversation</a>
-      <p class="mail-hint">or write to us directly</p>
-      <a class="mail-link" href="mailto:hello@buddhyantra.com">hello@buddhyantra.com</a>
+<!-- ============ CTA ============ -->
+<section id="talk" class="sec" style="padding-bottom:24px">
+  <div class="wrap">
+    <div class="cta">
+      <span class="eyebrow">Start here</span>
+      <h2>Tell us what isn't working.</h2>
+      <p>Bring the messy version. An app your users avoid, a queue nobody is clearing, a stalled AI pilot, a team that wants to learn. We'll tell you honestly whether AI is the answer.</p>
+      <a class="btn btn-primary" href="mailto:hello@buddhyantra.com?subject=Starting%20a%20conversation">Start a conversation
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <div class="mail"><span>or write to</span><span id="mail-addr">hello@buddhyantra.com</span><button type="button" id="copy">Copy</button></div>
     </div>
   </div>
 </section>
-
 </main>
 
-<footer class="site-foot">
-  <div class="wrap foot-in">
-    <p>Buddhyantra · बुद्धि + यन्त्र · the instrument of intelligence · India</p>
-    <nav aria-label="Footer">
-      <p>
-        <a href="#what-we-do">What we do</a> ·
-        <a href="products/filestrace.html">FilesTrace</a> ·
-        <a href="#faq">Questions</a> ·
-        <a href="mailto:hello@buddhyantra.com">hello@buddhyantra.com</a>
-      </p>
-    </nav>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top">
+          <svg viewBox="0 0 74 118" aria-hidden="true"><rect x="6" y="2" width="11" height="106" rx="5.5" fill="var(--violet)"/><path d="M11 62 L66 86 L11 110 Z" fill="none" stroke="var(--violet)" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/><circle cx="11.5" cy="54" r="7" fill="var(--marigold)"/></svg>
+          <span class="brand-txt"><span>Buddh<em>yantra</em></span><span class="brand-tag">Intelligence, engineered.</span></span>
+        </a>
+        <address>Padingare Purkkal Paramba, 36/1621 A, Vengeri,<br>Karaparamba, Nadakkavu, Kozhikode,<br>Kerala 673010, India</address>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="#what-we-do">Services</a></li><li><a href="#engage">How we work</a></li><li><a href="#about">About us</a></li><li><a href="mailto:hello@buddhyantra.com">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul><li><a href="https://crosdesk.com" target="_blank" rel="noopener">Crosdesk</a></li><li><a href="products/filestrace.html">FilesTrace</a></li></ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of service</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-base"><span>© 2026 Buddhyantra LLP. All rights reserved.</span><span>बुद्धि + यन्त्र · the instrument of intelligence</span></div>
   </div>
 </footer>
 
-<script>
-(function(){
-  var stage = document.getElementById('stage');
-  var wrap  = document.getElementById('stagewrap');
-  var head  = document.getElementById('head');
-  var lines = [].slice.call(document.querySelectorAll('.line'));
-  var notes = [].slice.call(document.querySelectorAll('.beat-note span'));
-  var pips  = [].slice.call(document.querySelectorAll('.beats i'));
-  var beat  = -1, lastP = -1, ticking = false;
-
-  function setBeat(n){
-    if (n === beat) return;
-    beat = n;
-    stage.setAttribute('data-beat', n);
-    lines.forEach(function(el,i){ el.classList.toggle('on', i <= n); });
-    notes.forEach(function(el,i){ el.classList.toggle('on', i === n); });
-    pips.forEach(function(el,i){ el.classList.toggle('on', i <= n); });
-  }
-
-  function update(){
-    ticking = false;
-    var y = window.scrollY || window.pageYOffset;
-    head.classList.toggle('stuck', y > 20);
-
-    var travel = wrap.offsetHeight - window.innerHeight;
-    var p = travel > 0 ? (y - wrap.offsetTop) / travel : 0;
-    p = p < 0 ? 0 : (p > 1 ? 1 : p);
-
-    if (Math.abs(p - lastP) > 0.002){
-      lastP = p;
-      stage.style.setProperty('--p', p.toFixed(3));
-    }
-    setBeat(p < 0.36 ? 0 : (p < 0.70 ? 1 : 2));
-  }
-
-  function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(update); } }
-
-  window.addEventListener('scroll', onScroll, {passive:true});
-  window.addEventListener('resize', onScroll);
-  requestAnimationFrame(update);
-
-  if ('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, {threshold:.15, rootMargin:'0px 0px -8% 0px'});
-    [].slice.call(document.querySelectorAll('.reveal')).forEach(function(el){ io.observe(el); });
-  } else {
-    [].slice.call(document.querySelectorAll('.reveal')).forEach(function(el){ el.classList.add('in'); });
-  }
-})();
-</script>
+<script src="assets/js/home.js"></script>
 </body>
 </html>

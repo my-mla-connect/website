@@ -4,18 +4,22 @@
 
   <url>
     <loc>https://buddhyantra.com/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://buddhyantra.com/assets/og-home.png</image:loc>
       <image:title>Buddhyantra — intelligence, engineered</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://buddhyantra.com/assets/crosdesk/project-canvas.webp</image:loc>
+      <image:title>The Crosdesk project canvas</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://buddhyantra.com/products/filestrace.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -46,6 +50,20 @@
       <image:loc>https://buddhyantra.com/assets/filestrace/rti.jpg</image:loc>
       <image:title>The RTI Act application register</image:title>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://buddhyantra.com/privacy.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://buddhyantra.com/terms.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
